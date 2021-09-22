@@ -1,6 +1,6 @@
 [submodule "src/main/kotlin/venusbackend"]
 	path = src/main/kotlin/venusbackend
-	url = git@github.com:ThaumicMekanism/venusbackend.git
+	url = https://github.com/ThaumicMekanism/venusbackend.git
 [submodule "src/test/kotlin/venusbackend"]
 	path = src/test/kotlin/venusbackend
-	url = git@github.com:ThaumicMekanism/venusbackend-tests.git
+	url = https://github.com/ThaumicMekanism/venusbackend-tests.git
