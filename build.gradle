@@ -1,6 +1,3 @@
-group 'venus'
-version 'jvm-latest'
-
 buildscript {
     ext.kotlin_version = '1.3.72'
     ext.ktlint_version = '0.27.0'
@@ -31,7 +28,10 @@ apply plugin: 'kotlinx-serialization'
 mainClassName = 'venus.Driver'
 jar {
     manifest {
-        attributes 'Main-Class': 'venus.Driver'
+        attributes(
+            "Main-Class": mainClassName,
+            "Implementation-Version": project.version
+        )
     }
 
     // This line of code recursively collects and copies all of a project's files

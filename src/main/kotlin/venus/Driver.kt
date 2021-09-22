@@ -34,6 +34,7 @@ import kotlin.system.exitProcess
  * The "driver" singleton which can be called from Javascript for all functionality.
  */
 object Driver {
+    var VERSION = Driver::class.java.getPackage().getImplementationVersion()
 
     var VFS = VirtualFileSystem("/")
 
@@ -61,6 +62,7 @@ object Driver {
     @JvmStatic
     fun main(args: Array<String>) {
         val cli = CommandLineInterface("venus")
+        val version by cli.flagArgument(listOf("-v", "--version"), "Print the Venus version and exit.", false, true)
         val libs by cli.flagValueArgument(listOf("-l", "--libs"), "libraries", "This is a list of library files you would like to assemble with the main file. Please separate them by a `;`.", "")
         val defs by cli.flagValueArgument(listOf("--def"), "define", "This is a list of define values which you want the assembler to have. Please note it must be in the format `key=value` and are separated by `;`.", "")
         val regWidth by cli.flagValueArgument(listOf("-r", "--regwidth"), "RegisterWidth", "Sets register width (Currently only supporting 32 (default) and 64).", "32")
@@ -110,12 +112,22 @@ object Driver {
 //        val fileIsAssembly by cli.flagArgument(listOf("-fa", "--fileIsAssembly"), "This will interpret the assembly text file as instructions.", false, true)
         val fileIsAssembly by cli.flagArgument(listOf("-fa", "--fileIsAssembly"), "This will interpret the assembly text file as instructions. If you set file to stdin, venus will listen on stdin to return a dump of the instruction. Note that branches and jumps will have a 0 immediate in this case.", false, true)
 
-        val assemblyTextFile by cli.positionalArgument("file", "This is the file/filepath you want to assemble", "", minArgs = 1)
+        val assemblyTextFile by cli.positionalArgument("file", "This is the file/filepath you want to assemble", "")
         val simArgs by cli.positionalArgumentsList("simulatorArgs", "Args which are put into the simulated program.")
 
         try {
             cli.parse(args)
         } catch (e: Exception) {
+            exitProcess(-1)
+        }
+
+        if (version) {
+            System.out.println(VERSION)
+            exitProcess(0)
+        }
+
+        if (assemblyTextFile.equals("")) {
+            System.err.println("Missing file argument, check --help for usage")
             exitProcess(-1)
         }
 
