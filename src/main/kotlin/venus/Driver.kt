@@ -94,7 +94,9 @@ object Driver {
 
         val mutableText by cli.flagArgument(listOf("-it", "--immutableText"), "When used, an error will be thrown when the code is modified.", true, false)
         val maxSteps by cli.flagValueArgument(listOf("-ms", "--maxsteps"), "MaxSteps", "Sets the max number of steps to allow (negative to not care).", "500000")
-        val stackHeapProtection by cli.flagArgument(listOf("-ahs", "--AllowHSAccess"), "Allows for load/store operations between the stack and heap. The default (without this flag) is to error on those acceses.", false, true)
+        val stackHeapProtection by cli.flagArgument(listOf("-ahs", "--AllowHSAccess"), "Allows for load/store operations between the stack and heap. The default (without this flag) is to error on those accesses.", false, true)
+        val memcheck by cli.flagArgument(listOf("-mc", "--memcheck"), "Better memory checks when accessing unallocated stack/heap memory (cannot have --AllowHSAccess)", false, true)
+        val memcheckVerbose by cli.flagArgument(listOf("-mcv", "--memcheckVerbose"), "Verbose version of --memcheck (cannot have --AllowHSAccess)", false, true)
 
         val host by cli.flagValueArgument(listOf("--host"), "Host", "Host to server to.", "localhost")
         val port by cli.flagValueArgument(listOf("-p", "--port"), "Port", "Port to serve on.", "6161")
@@ -150,6 +152,8 @@ object Driver {
         simSettings.maxSteps = maxSteps.toInt()
         simSettings.mutableText = mutableText
         simSettings.allowAccessBtnStackHeap = stackHeapProtection
+        simSettings.memcheck = memcheck || memcheckVerbose
+        simSettings.memcheckVerbose = memcheckVerbose
 
         if (defs != "") {
             for (def in defs.split(";")) {
@@ -297,7 +301,7 @@ object Driver {
      * @param text the assembly code.
      */
     internal fun assemble(text: String, name: String, abspath: String): Program? {
-        val (prog, errors, warnings) = Assembler.assemble(text, name = name, abspath = abspath)
+        val (prog, errors, warnings) = Assembler.assemble(text, name = name, abspath = abspath, expandDataSegment = this.simSettings.memcheck)
         if (warnings.isNotEmpty()) {
             for (warning in warnings) {
                 Renderer.displayWarning(warning)
