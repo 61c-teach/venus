@@ -97,6 +97,7 @@ object Driver {
         val stackHeapProtection by cli.flagArgument(listOf("-ahs", "--AllowHSAccess"), "Allows for load/store operations between the stack and heap. The default (without this flag) is to error on those accesses.", false, true)
         val memcheck by cli.flagArgument(listOf("-mc", "--memcheck"), "Better memory checks when accessing unallocated stack/heap memory (cannot have --AllowHSAccess)", false, true)
         val memcheckVerbose by cli.flagArgument(listOf("-mcv", "--memcheckVerbose"), "Verbose version of --memcheck (cannot have --AllowHSAccess)", false, true)
+        val ecallOnlyExit by cli.flagArgument(listOf("-eoe", "--ecallOnlyExit"), "Exit only on ecall", false, true)
 
         val host by cli.flagValueArgument(listOf("--host"), "Host", "Host to server to.", "localhost")
         val port by cli.flagValueArgument(listOf("-p", "--port"), "Port", "Port to serve on.", "6161")
@@ -154,6 +155,7 @@ object Driver {
         simSettings.allowAccessBtnStackHeap = stackHeapProtection
         simSettings.memcheck = memcheck || memcheckVerbose
         simSettings.memcheckVerbose = memcheckVerbose
+        simSettings.ecallOnlyExit = ecallOnlyExit
 
         if (defs != "") {
             for (def in defs.split(";")) {
@@ -276,6 +278,7 @@ object Driver {
 //            println() // This is to end on a new line regardless of the output.
         } catch (e: Exception) {
             println(e)
+            e.printStackTrace()
             exitProcess(-1)
         }
     }
@@ -319,7 +322,7 @@ object Driver {
 
     internal fun link(progs: List<Program>): Boolean {
         try {
-            val PandL = ProgramAndLibraries(progs, VFS)
+            val PandL = ProgramAndLibraries(progs, VFS, expandDataSegment = this.simSettings.memcheck)
             val linked = Linker.link(PandL)
             loadSim(linked)
             return true
