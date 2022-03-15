@@ -112,6 +112,8 @@ object Driver {
         val coverageFile by cli.flagValueArgument(listOf("-cf", "--coverageFile"), "Coverage File", "Specifies a file for the coverage output. Format: Each line: <Hex PC> <location> <count>", "")
         val jsonCoverageFile by cli.flagValueArgument(listOf("-jcf", "--jsonCoverageFile"), "Coverage File", "Specifies a file for the coverage output. Format Json: dictionary mapping <PC> to {location, count}", "")
 
+        val newWorkingDirectory by cli.flagValueArgument(listOf("-wd", "--workingDirectory"), "Working Directory", "Change the working directory of Venus", "")
+
 //        val fileIsAssembly by cli.flagArgument(listOf("-fa", "--fileIsAssembly"), "This will interpret the assembly text file as instructions.", false, true)
         val fileIsAssembly by cli.flagArgument(listOf("-fa", "--fileIsAssembly"), "This will interpret the assembly text file as instructions. If you set file to stdin, venus will listen on stdin to return a dump of the instruction. Note that branches and jumps will have a 0 immediate in this case.", false, true)
 
@@ -156,6 +158,21 @@ object Driver {
         simSettings.memcheck = memcheck || memcheckVerbose
         simSettings.memcheckVerbose = memcheckVerbose
         simSettings.ecallOnlyExit = ecallOnlyExit
+
+        workingdir = if (newWorkingDirectory != "") {
+            val workingdirFile = if (newWorkingDirectory.startsWith(File.separator)) {
+                File(newWorkingDirectory)
+            } else {
+                File(System.getProperty("user.dir"), newWorkingDirectory)
+            }
+            if (workingdirFile.exists() && workingdirFile.isDirectory) {
+                workingdirFile.absolutePath
+            } else {
+                throw SimulatorError("Invalid working directory $newWorkingDirectory")
+            }
+        } else {
+            System.getProperty("user.dir")
+        }
 
         if (defs != "") {
             for (def in defs.split(";")) {
@@ -278,7 +295,6 @@ object Driver {
 //            println() // This is to end on a new line regardless of the output.
         } catch (e: Exception) {
             println(e)
-            e.printStackTrace()
             exitProcess(-1)
         }
     }
@@ -288,8 +304,6 @@ object Driver {
             val f = File(fileName)
             if (set_last_file) {
                 lastReadFile = f
-//                workingdir = f.absoluteFile.parent
-                workingdir = System.getProperty("user.dir")
             }
             f.readText(Charsets.UTF_8)
         } catch (e: FileNotFoundException) {
