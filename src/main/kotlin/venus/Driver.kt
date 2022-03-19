@@ -607,16 +607,8 @@ object Driver {
 
     private fun coreDumpToFileText(fileName: String, sim: Simulator) {
         if (fileName != "") {
-            val instrStr = sim.getInstDebugStr(sim.getPC())
-
-            val jumpDump = sim.getJumpDumpStr()
-            val stateDump = "Current PC: ${Renderer.toHex(sim.getPC())}\nCurrent Instruction: $instrStr\nJump/Branch History (reverse):\n$jumpDump\n"
-            val regDump = "Registers:\n${sim.getRegDumpStr("")}\n"
-            val instDump = "Instructions:\n${sim.getInstDumpStr("")}"
-            val memDump = "Memory:\n${sim.getMemDumpStr("")}\n"
-
-            val dump = "$stateDump\n$regDump\n$instDump\n$memDump\n"
-            File(fileName).writeText(dump)
+            val coreDumpText = sim.getCoreDumpText()
+            File(fileName).writeText(coreDumpText)
         }
     }
 }
