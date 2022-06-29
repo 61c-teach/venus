@@ -94,17 +94,19 @@ internal object Renderer {
     }
 
     fun renderSimButtons() {
+        // Turn all simulator-related buttons on, except for "Assemble & Simulate..."
         val simbtns = document.getElementById("simulator-buttons") as HTMLDivElement
-        val simassmbbtns = document.getElementById("simulator-assemble-buttons") as HTMLDivElement
-        simassmbbtns.style.display = "none"
         simbtns.style.display = ""
+        val assembleContainer = document.getElementById("simulator-assemble-simulator-container") as HTMLDivElement
+        assembleContainer.style.display = "none"
     }
 
     fun renderAssembleButtons() {
+        // Turn all simulator-related buttons off, except for "Assemble & Simulate..."
         val simbtns = document.getElementById("simulator-buttons") as HTMLDivElement
-        val simassmbbtns = document.getElementById("simulator-assemble-buttons") as HTMLDivElement
-        simassmbbtns.style.display = ""
         simbtns.style.display = "none"
+        val assembleContainer = document.getElementById("simulator-assemble-simulator-container") as HTMLDivElement
+        assembleContainer.style.display = ""
     }
 
     /** Shows the editor tab and hides other tabs */
@@ -244,22 +246,33 @@ internal object Renderer {
         newRow.id = "instruction-$pcx"
         newRow.onclick = { Driver.addBreakpoint(pcx) }
 
-        val pcline = newRow.insertCell(0)
+        var cellIndex = 0
+        val breakpointLine = newRow.insertCell(cellIndex)
+        val breakpointNode = document.createElement("div")
+        breakpointNode.setAttribute("name", "breakpoint_cell")
+        breakpointLine.appendChild(breakpointNode)
+        cellIndex++
+
+        val pcline = newRow.insertCell(cellIndex)
         val pcText = document.createTextNode("0x" + (pcx).toString(16))
         pcline.appendChild(pcText)
+        cellIndex++
 
         val hexRepresention = toHex(mcode[InstructionField.ENTIRE].toInt(), mcode.length * 2)
-        val machineCode = newRow.insertCell(1)
+        val machineCode = newRow.insertCell(cellIndex)
         val machineCodeText = document.createTextNode(hexRepresention)
         machineCode.appendChild(machineCodeText)
+        cellIndex++
 
-        val basicCode = newRow.insertCell(2)
+        val basicCode = newRow.insertCell(cellIndex)
         val basicCodeText = document.createTextNode(if (invalidInst) progLine else Instruction[mcode].disasm(mcode))
         basicCode.appendChild(basicCodeText)
+        cellIndex++
 
-        val line = newRow.insertCell(3)
+        val line = newRow.insertCell(cellIndex)
         val lineText = document.createTextNode(progLine)
         line.appendChild(lineText)
+        cellIndex++
     }
 
     fun updateProgramListing(idx: Number, inst: Int, orig: String? = null): InstructionDiff {
@@ -453,7 +466,20 @@ internal object Renderer {
         activeInstruction?.classList?.remove("is-selected")
         val newActiveInstruction = document.getElementById("instruction-$idx") as HTMLElement?
         newActiveInstruction?.classList?.add("is-selected")
-        newActiveInstruction?.scrollIntoView(false)
+
+        // Only scroll if out of view
+        if (newActiveInstruction != null) {
+            val listingContainer = document.getElementById("program-listing-container-parent") as HTMLElement
+            val containerHeight = listingContainer.offsetHeight
+            if (newActiveInstruction.getBoundingClientRect().top -
+                    listingContainer.getBoundingClientRect().top < 0) {
+                newActiveInstruction.scrollIntoView(true)
+            } else if (newActiveInstruction.getBoundingClientRect().bottom -
+                    listingContainer.getBoundingClientRect().top > containerHeight) {
+                newActiveInstruction.scrollIntoView(false)
+            }
+        }
+
         activeInstruction = newActiveInstruction
     }
 
@@ -557,8 +583,10 @@ internal object Renderer {
         val row = getElement("instruction-$idx")
         if (state) {
             row.classList.add("is-breakpoint")
+            row.querySelector("[name=\"breakpoint_cell\"]")?.addClass("is-breakpoint")
         } else {
             row.classList.remove("is-breakpoint")
+            row.querySelector("[name=\"breakpoint_cell\"]")?.removeClass("is-breakpoint")
         }
     }
 

@@ -10,18 +10,17 @@
 }
 
 .theme-dark #program-listing {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     background-color: black;
 }
 
 .theme-dark #program-listing-body tr.is-breakpoint {
-    background-color: #eb355a;
+    background-color: #3A2323;
     color: white;
 }
 
 .theme-dark #program-listing-body tr.is-selected {
-    background-color: #00927c;
-    color: white;
+    background-color: #2D6099;
 }
 
 .theme-dark #program-listing-container {
@@ -32,7 +31,7 @@
 }
 
 .theme-dark #memory-table {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     margin: auto;
     background-color: black;
 }
@@ -46,7 +45,7 @@
 
 .theme-dark #console-output {
     height: 100%;
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     background-color: black;
     font-weight: bold;
     color: #CCCCCC;
@@ -58,21 +57,21 @@
 }
 
 .theme-dark #regs-tab-view .input {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     border-width: 2px;
     background-color: black;
     font-weight: bold;
 }
 
 .theme-dark #fregs-tab-view .input {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     border-width: 2px;
     background-color: black;
     font-weight: bold;
 }
 
 .theme-dark #cache-tab-view .input {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     border-width: 2px;
     background-color: black;
     color: #CCCCCC;
@@ -189,8 +188,18 @@
     color: #fff;
 }
 
+.theme-dark .button.is-warning {
+    background-color: #947600;
+    border-color: transparent;
+    color: #fff;
+}
+
 .button.is-primary:hover, .button.is-primary.is-hovered {
     background-color: #007d6b;
+}
+
+.button.is-warning:hover, .button.is-warning.is-hovered {
+    background-color: #806600;
 }
 
 .theme-dark .button.is-primary.is-active, .theme-dark .button.is-primary:active {

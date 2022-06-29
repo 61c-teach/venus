@@ -398,7 +398,7 @@
       <div class="tile">
         <div class="tile is-parent">
           <article class="tile is-child is-primary" id="simulator-controls-container">
-            <div class="field is-grouped is-grouped-centered" id="simulator-buttons" style="display:none;">
+            <div id="simulator-buttons" class="field is-grouped is-grouped-centered">
               <div class="control">
                 <button id="simulator-run" class="button is-primary" onclick="driver.run()">Run</button>
               </div>
@@ -417,23 +417,24 @@
               <div class="control">
                 <button id="simulator-trace" class="button is-primary" onclick="driver.trace()">Trace</button>
               </div>
+              <div class="control">
+                <button id="simulator-reassemble-simulator" class="button is-warning" onclick="driver.assembleSimulator()">Re-assemble from Editor</button>
+              </div>
             </div>
-            <div class="field is-grouped is-grouped-centered" id="simulator-assemble-buttons">
+            <div id="simulator-assemble-simulator-container" class="field is-grouped is-grouped-centered">
               <div class="control">
                 <button id="simulator-assemble-simulator" class="button is-primary" onclick="driver.assembleSimulator()">Assemble & Simulate from Editor</button>
-              </div>
-              <div class="control">
-                <button id="simulator-no-assemble" class="button" onclick="driver.noAssemble()">Cancel</button>
               </div>
             </div>
           </article>
         </div>
       </div>
       <div class="tile">
-        <div class="tile is-parent">
+        <div class="tile is-parent" id="program-listing-container-parent">
           <article class="tile is-child is-primary" id="program-listing-container">
             <table id="program-listing" class="table">
               <colgroup>
+                <col id="bp-column">
                 <col id="pc-column">
                 <col id="mc-column">
                 <col id="bc-column">
@@ -441,6 +442,7 @@
               </colgroup>
               <thead>
               <tr>
+                <th></th>
                 <th>PC</th>
                 <th>Machine Code</th>
                 <th>Basic Code</th>
@@ -1400,16 +1402,25 @@
                     </div>
                   </div>
                 </div>
-                <div class="panel-block">
+                <form onsubmit="if ($('#memMove').val() !== ''){driver.moveMemoryLocation($('#memMove').val());$('#memMove').val('');}; return false;">
+                  <div class="panel-block">
                     <div class="field is-horizontal">
-                      <div class="field-label">
-                        <label class="label is-small" for="memMove">Address:</label>
+                      <div class="field-label is-normal">
+                        <label class="label" for="memMove">Address:</label>
                       </div>
-                      <div class="field-body is-expanded">
-                        <input id="memMove" class="input is-small" onblur="if (this.value !== ''){driver.moveMemoryLocation(this.value);this.value='';}" spellcheck="false">
+                      <div class="field-body">
+                        <div class="field">
+                          <input id="memMove" class="input is-small" spellcheck="false">
+                        </div>
+                        <div class="field is-narrow">
+                          <div class="control">
+                            <input type="submit" class="button" value="Go">
+                          </div>
+                        </div>
                       </div>
                     </div>
-                </div>
+                  </div>
+                </form>
               </div>
               <div id="cache-tab-view">
                 <div id="numCacheLvls" class="panel-block">

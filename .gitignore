@@ -27,3 +27,5 @@ venus.iml
 
 # Tests
 final_output.bin
+
+.DS_Store

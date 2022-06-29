@@ -267,7 +267,6 @@ import kotlin.dom.removeClass
      * Opens and renders the editor.
      */
     @JsName("openEditor") fun openEditor() {
-        runEnd()
         openGenericMainTab("editor")
         js("codeMirror.refresh();")
     }
@@ -278,9 +277,6 @@ import kotlin.dom.removeClass
 
     @JsName("openGenericMainTab") fun openGenericMainTab(name: String) {
         Renderer.renderTab(name, Renderer.mainTabs)
-        if (name == "editor") {
-            Renderer.renderAssembleButtons()
-        }
         LS.set("defaultTab", name)
     }
 

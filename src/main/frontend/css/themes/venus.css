@@ -31,19 +31,23 @@ body {
     width: 100%;
     height: 88vh;
     max-height: 88vh;
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .section {
     padding: 0 1.5rem;
 }
 
+#bp-column {
+    width: 3%;
+}
+
 #pc-column {
-    width: 10%;
+    width: 12%;
 }
 
 #mc-column {
-    width: 20%;
+    width: 15%;
 }
 
 #bc-column {
@@ -67,7 +71,7 @@ body {
 }
 
 #program-listing {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 #program-listing-body {
@@ -76,12 +80,18 @@ body {
 }
 
 #program-listing-body tr.is-breakpoint {
-    background-color: #ff3860;
-    color: white;
+    background-color: #FAEAE6;
+}
+
+#program-listing-body tr div.is-breakpoint {
+    background: #eb355a;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
 }
 
 #program-listing-body tr.is-selected {
-    background-color: #00d1b2;
+    background-color: #2154A6;
     color: white;
 }
 
@@ -114,11 +124,11 @@ body {
 }
 
 #regs-tab-view {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 #fregs-tab-view {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     display: none;
 }
 
@@ -159,7 +169,7 @@ body {
 }
 
 #memory-table {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     margin: auto;
     background-color: white;
 }
@@ -178,7 +188,7 @@ body {
 
 #console-output {
     height: 100%;
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .tabs {
@@ -194,7 +204,7 @@ body {
 }
 
 #regs-tab-view .input {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     border-width: 2px;
 }
 
@@ -203,7 +213,7 @@ body {
 }
 
 #fregs-tab-view .input {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     border-width: 2px;
 }
 
@@ -212,13 +222,13 @@ body {
 }
 
 #cache-tab-view {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     line-height: 1em;
     font-size: 0.9em;
 }
 
 #cache-tab-view .input {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     border-width: 2px;
 }
 
@@ -227,13 +237,13 @@ body {
 }
 
 #settings-tab-view {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     line-height: 1em;
     font-size: 0.9em;
 }
 
 #settings-tab-view .input {
-    font-family: Courier New, Courier, monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     border-width: 2px;
 }
 
@@ -247,6 +257,19 @@ body {
 
 .byte-column {
     width: 15%;
+}
+
+#regs-tab-view, #fregs-tab-view {
+    border: 1px solid #dbdbdb;
+}
+
+#regs-tab-view > .panel-block, #fregs-tab-view > .panel-block {
+  border: none;
+}
+
+#regs-tab-view > .panel-block > .field, #fregs-tab-view > .panel-block > .field {
+  margin-bottom: 0em;
+  padding: 0.5em;
 }
 
 .panel-block > .field {
