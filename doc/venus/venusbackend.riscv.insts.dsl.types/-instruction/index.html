@@ -1,0 +1,265 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Instruction - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.riscv.insts.dsl.types</a>&nbsp;/&nbsp;<a href="./index.html">Instruction</a><br/>
+<br/>
+<h1>Instruction</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Instruction</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">Instruction</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction$<init>(kotlin.String, venusbackend.riscv.insts.dsl.formats.InstructionFormat, venusbackend.riscv.insts.dsl.parsers.InstructionParser, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction$<init>(kotlin.String, venusbackend.riscv.insts.dsl.formats.InstructionFormat, venusbackend.riscv.insts.dsl.parsers.InstructionParser, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler)/format">format</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.dsl.formats/-instruction-format/index.html"><span class="identifier">InstructionFormat</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction$<init>(kotlin.String, venusbackend.riscv.insts.dsl.formats.InstructionFormat, venusbackend.riscv.insts.dsl.parsers.InstructionParser, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler)/parser">parser</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.dsl.parsers/-instruction-parser/index.html"><span class="identifier">InstructionParser</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction$<init>(kotlin.String, venusbackend.riscv.insts.dsl.formats.InstructionFormat, venusbackend.riscv.insts.dsl.parsers.InstructionParser, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler)/impl16">impl16</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.dsl.impls/-instruction-implementation/index.html"><span class="identifier">InstructionImplementation</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction$<init>(kotlin.String, venusbackend.riscv.insts.dsl.formats.InstructionFormat, venusbackend.riscv.insts.dsl.parsers.InstructionParser, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler)/impl32">impl32</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.dsl.impls/-instruction-implementation/index.html"><span class="identifier">InstructionImplementation</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction$<init>(kotlin.String, venusbackend.riscv.insts.dsl.formats.InstructionFormat, venusbackend.riscv.insts.dsl.parsers.InstructionParser, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler)/impl64">impl64</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.dsl.impls/-instruction-implementation/index.html"><span class="identifier">InstructionImplementation</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction$<init>(kotlin.String, venusbackend.riscv.insts.dsl.formats.InstructionFormat, venusbackend.riscv.insts.dsl.parsers.InstructionParser, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler)/impl128">impl128</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.dsl.impls/-instruction-implementation/index.html"><span class="identifier">InstructionImplementation</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction$<init>(kotlin.String, venusbackend.riscv.insts.dsl.formats.InstructionFormat, venusbackend.riscv.insts.dsl.parsers.InstructionParser, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.impls.InstructionImplementation, venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler)/disasm">disasm</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.dsl.disasms/-instruction-disassembler/index.html"><span class="identifier">InstructionDisassembler</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="disasm.html">disasm</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">disasm</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.dsl.disasms/-instruction-disassembler/index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="format.html">format</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">format</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.dsl.formats/-instruction-format/index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="impl128.html">impl128</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">impl128</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.dsl.impls/-instruction-implementation/index.html"><span class="identifier">InstructionImplementation</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="impl16.html">impl16</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">impl16</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.dsl.impls/-instruction-implementation/index.html"><span class="identifier">InstructionImplementation</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="impl32.html">impl32</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">impl32</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.dsl.impls/-instruction-implementation/index.html"><span class="identifier">InstructionImplementation</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="impl64.html">impl64</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">impl64</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.dsl.impls/-instruction-implementation/index.html"><span class="identifier">InstructionImplementation</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="name.html">name</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="parser.html">parser</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">parser</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.dsl.parsers/-instruction-parser/index.html"><span class="identifier">InstructionParser</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction.Companion$get(venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Instruction</span></a></code><br/>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction.Companion$get(kotlin.String, venusbackend.assembler.DebugInfo)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.types.Instruction.Companion$get(kotlin.String, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.assembler/-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.atomic/-a-m-o-r-type-instruction/index.html">AMORTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AMORTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.base/-b-type-instruction/index.html">BTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.compressed/-c-a-type-instruction/index.html">CATypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CATypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.compressed/-c-r-type-instruction/index.html">CRTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CRTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-f3-r-type-instruction/index.html">F3RTypeInstruction</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">class </span><span class="identifier">F3RTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-fclass-r-type-instruction/index.html">FclassRTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FclassRTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-f-f-r-r-type-instruction/index.html">FFRRTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FFRRTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-f-i-type-instruction/index.html">FITypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FITypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-f-r4-type-instruction/index.html">FR4TypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FR4TypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-f-r-r-type-instruction/index.html">FRRTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FRRTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-f-r-type-instruction/index.html">FRTypeInstruction</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">class </span><span class="identifier">FRTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-f-s-type-instruction/index.html">FSTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FSTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-ft-r-type-instruction/index.html">FtRTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FtRTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.base/-i-type-instruction/index.html">ITypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ITypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.base/-load-type-instruction/index.html">LoadTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">LoadTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.extensions.floating/-rt-f-type-instruction/index.html">RtFTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RtFTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.base/-r-type-instruction/index.html">RTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.base/-shift-immediate-instruction/index.html">ShiftImmediateInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ShiftImmediateInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.base/-shift-w-immediate-instruction/index.html">ShiftWImmediateInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ShiftWImmediateInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.base/-s-type-instruction/index.html">STypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">STypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.types.base/-u-type-instruction/index.html">UTypeInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UTypeInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

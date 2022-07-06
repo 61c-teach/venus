@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CacheState - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator.cache</a>&nbsp;/&nbsp;<a href="./index.html">CacheState</a><br/>
+<br/>
+<h1>CacheState</h1>
+<code><span class="keyword">class </span><span class="identifier">CacheState</span></code>
+<p>This is a class representing the state of a cacheHandler.</p>
+<p>If default is true, then the address is ignored since it will be the centinel node.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>This is a class representing the state of a cacheHandler.</p>
+<code><span class="identifier">CacheState</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.CacheState$<init>(venusbackend.riscv.Address, venusbackend.simulator.cache.CacheHandler, venusbackend.simulator.cache.RW, kotlin.Boolean)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.CacheState$<init>(venusbackend.riscv.Address, venusbackend.simulator.cache.CacheHandler, venusbackend.simulator.cache.RW, kotlin.Boolean)/cacheHandler">cacheHandler</span><span class="symbol">:</span>&nbsp;<a href="../-cache-handler/index.html"><span class="identifier">CacheHandler</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.CacheState$<init>(venusbackend.riscv.Address, venusbackend.simulator.cache.CacheHandler, venusbackend.simulator.cache.RW, kotlin.Boolean)/rw">rw</span><span class="symbol">:</span>&nbsp;<a href="../-r-w/index.html"><span class="identifier">RW</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.CacheState$<init>(venusbackend.riscv.Address, venusbackend.simulator.cache.CacheHandler, venusbackend.simulator.cache.RW, kotlin.Boolean)/default">default</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="latest-change.html">latestChange</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">latestChange</span><span class="symbol">: </span><a href="../-changed-block-state/index.html"><span class="identifier">ChangedBlockState</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="prev-block-states.html">prevBlockStates</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">prevBlockStates</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-blocks-state.html">getBlocksState</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBlocksState</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-changed-block-state.html">getChangedBlockState</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getChangedBlockState</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-changed-block-state/index.html"><span class="identifier">ChangedBlockState</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-hit-count.html">getHitCount</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getHitCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-hit-rate.html">getHitRate</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getHitRate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-miss-count.html">getMissCount</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMissCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-miss-rate.html">getMissRate</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMissRate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-prev-changed-block.html">getPrevChangedBlock</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPrevChangedBlock</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="was-hit.html">wasHit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">wasHit</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

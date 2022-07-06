@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProgramAndLibraries - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.linker</a>&nbsp;/&nbsp;<a href="./index.html">ProgramAndLibraries</a><br/>
+<br/>
+<h1>ProgramAndLibraries</h1>
+<code><span class="keyword">class </span><span class="identifier">ProgramAndLibraries</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">ProgramAndLibraries</span><span class="symbol">(</span><span class="identifier" id="venusbackend.linker.ProgramAndLibraries$<init>(kotlin.collections.List((venusbackend.riscv.Program)), venus.vfs.VirtualFileSystem)/progs">progs</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.riscv/-program/index.html"><span class="identifier">Program</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="venusbackend.linker.ProgramAndLibraries$<init>(kotlin.collections.List((venusbackend.riscv.Program)), venus.vfs.VirtualFileSystem)/vfs">vfs</span><span class="symbol">:</span>&nbsp;<a href="../../venus.vfs/-virtual-file-system/index.html"><span class="identifier">VirtualFileSystem</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-all-progs.html">AllProgs</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">AllProgs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.riscv/-program/index.html"><span class="identifier">Program</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="progs.html">progs</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">progs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.riscv/-program/index.html"><span class="identifier">Program</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-program-imports.html">addProgramImports</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addProgramImports</span><span class="symbol">(</span><span class="identifier" id="venusbackend.linker.ProgramAndLibraries$addProgramImports(venusbackend.riscv.Program, venusbackend.riscv.Import, kotlin.String, kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)), kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)))/prog">prog</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-program/index.html"><span class="identifier">Program</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.linker.ProgramAndLibraries$addProgramImports(venusbackend.riscv.Program, venusbackend.riscv.Import, kotlin.String, kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)), kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)))/progImport">progImport</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-import/index.html"><span class="identifier">Import</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.linker.ProgramAndLibraries$addProgramImports(venusbackend.riscv.Program, venusbackend.riscv.Import, kotlin.String, kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)), kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)))/progImportAbsPath">progImportAbsPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.linker.ProgramAndLibraries$addProgramImports(venusbackend.riscv.Program, venusbackend.riscv.Import, kotlin.String, kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)), kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)))/SeenPrograms">SeenPrograms</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.riscv/-import/index.html"><span class="identifier">Import</span></a><span class="symbol">,</span>&nbsp;<a href="../-import-program-data/index.html"><span class="identifier">ImportProgramData</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="venusbackend.linker.ProgramAndLibraries$addProgramImports(venusbackend.riscv.Program, venusbackend.riscv.Import, kotlin.String, kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)), kotlin.collections.HashMap((venusbackend.riscv.Import, venusbackend.linker.ImportProgramData)))/needToImportPrograms">needToImportPrograms</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.riscv/-import/index.html"><span class="identifier">Import</span></a><span class="symbol">,</span>&nbsp;<a href="../-import-program-data/index.html"><span class="identifier">ImportProgramData</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

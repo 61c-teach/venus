@@ -1,0 +1,102 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:venusbackend$and(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/and.html
+$dokka.location:venusbackend$compareTo(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/compare-to.html
+$dokka.location:venusbackend$div(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/div.html
+$dokka.location:venusbackend$inc(kotlin.Number)venusbackend/kotlin.-number/inc.html
+$dokka.location:venusbackend$minus(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/minus.html
+$dokka.location:venusbackend$or(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/or.html
+$dokka.location:venusbackend$plus(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/plus.html
+$dokka.location:venusbackend$rem(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/rem.html
+$dokka.location:venusbackend$shl(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/shl.html
+$dokka.location:venusbackend$shr(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/shr.html
+$dokka.location:venusbackend$times(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/times.html
+$dokka.location:venusbackend$ushr(kotlin.Number, kotlin.Number)venusbackend/kotlin.-number/ushr.html
+$dokka.location:venusbackend.cli$nextOrNull(kotlin.collections.Iterator((venusbackend.cli.nextOrNull.T)))venusbackend.cli/kotlin.collections.-iterator/next-or-null.html
+$dokka.location:venusbackend.numbers$minus(kotlin.Int, venusbackend.numbers.DoubleQuadWord)venusbackend.numbers/kotlin.-int/minus.html
+$dokka.location:venusbackend.numbers$minus(kotlin.Int, venusbackend.numbers.QuadWord)venusbackend.numbers/kotlin.-int/minus.html
+$dokka.location:venusbackend.numbers$toDoubleQuadWord(kotlin.Byte)venusbackend.numbers/kotlin.-byte/to-double-quad-word.html
+$dokka.location:venusbackend.numbers$toDoubleQuadWord(kotlin.Int)venusbackend.numbers/kotlin.-int/to-double-quad-word.html
+$dokka.location:venusbackend.numbers$toDoubleQuadWord(kotlin.Long)venusbackend.numbers/kotlin.-long/to-double-quad-word.html
+$dokka.location:venusbackend.numbers$toDoubleQuadWord(kotlin.Number)venusbackend.numbers/kotlin.-number/to-double-quad-word.html
+$dokka.location:venusbackend.numbers$toDoubleQuadWord(kotlin.Short)venusbackend.numbers/kotlin.-short/to-double-quad-word.html
+$dokka.location:venusbackend.numbers$toQuadWord(kotlin.Byte)venusbackend.numbers/kotlin.-byte/to-quad-word.html
+$dokka.location:venusbackend.numbers$toQuadWord(kotlin.Int)venusbackend.numbers/kotlin.-int/to-quad-word.html
+$dokka.location:venusbackend.numbers$toQuadWord(kotlin.Long)venusbackend.numbers/kotlin.-long/to-quad-word.html
+$dokka.location:venusbackend.numbers$toQuadWord(kotlin.Number)venusbackend.numbers/kotlin.-number/to-quad-word.html
+$dokka.location:venusbackend.numbers$toQuadWord(kotlin.Short)venusbackend.numbers/kotlin.-short/to-quad-word.html
+$dokka.location:venusbackend.numbers$toUDoubleQuadWord(kotlin.Byte)venusbackend.numbers/kotlin.-byte/to-u-double-quad-word.html
+$dokka.location:venusbackend.numbers$toUDoubleQuadWord(kotlin.Int)venusbackend.numbers/kotlin.-int/to-u-double-quad-word.html
+$dokka.location:venusbackend.numbers$toUDoubleQuadWord(kotlin.Long)venusbackend.numbers/kotlin.-long/to-u-double-quad-word.html
+$dokka.location:venusbackend.numbers$toUDoubleQuadWord(kotlin.Short)venusbackend.numbers/kotlin.-short/to-u-double-quad-word.html
+$dokka.location:venusbackend.numbers$toUQuadWord(kotlin.Byte)venusbackend.numbers/kotlin.-byte/to-u-quad-word.html
+$dokka.location:venusbackend.numbers$toUQuadWord(kotlin.Int)venusbackend.numbers/kotlin.-int/to-u-quad-word.html
+$dokka.location:venusbackend.numbers$toUQuadWord(kotlin.Long)venusbackend.numbers/kotlin.-long/to-u-quad-word.html
+$dokka.location:venusbackend.numbers$toUQuadWord(kotlin.Short)venusbackend.numbers/kotlin.-short/to-u-quad-word.html
+venus
+venus.api
+venus.api.venusbackend.simulator
+venus.terminal
+venus.terminal.cmds
+venus.vfs
+venus.zip
+venusbackend
+venusbackend.assembler
+venusbackend.assembler.pseudos
+venusbackend.cli
+venusbackend.linker
+venusbackend.numbers
+venusbackend.riscv
+venusbackend.riscv.insts
+venusbackend.riscv.insts.dsl
+venusbackend.riscv.insts.dsl.disasms
+venusbackend.riscv.insts.dsl.disasms.base
+venusbackend.riscv.insts.dsl.disasms.extensions.atomic
+venusbackend.riscv.insts.dsl.disasms.extensions.compressed
+venusbackend.riscv.insts.dsl.disasms.extensions.floating
+venusbackend.riscv.insts.dsl.formats
+venusbackend.riscv.insts.dsl.formats.base
+venusbackend.riscv.insts.dsl.formats.extensions.atomic
+venusbackend.riscv.insts.dsl.formats.extensions.compressed
+venusbackend.riscv.insts.dsl.formats.extensions.floating
+venusbackend.riscv.insts.dsl.impls
+venusbackend.riscv.insts.dsl.impls.base.b32
+venusbackend.riscv.insts.dsl.impls.base.b64
+venusbackend.riscv.insts.dsl.impls.extensions.atomic.b32
+venusbackend.riscv.insts.dsl.impls.extensions.compressed.b32
+venusbackend.riscv.insts.dsl.impls.extensions.floating.b32
+venusbackend.riscv.insts.dsl.parsers
+venusbackend.riscv.insts.dsl.parsers.base
+venusbackend.riscv.insts.dsl.parsers.extensions.atomic
+venusbackend.riscv.insts.dsl.parsers.extensions.compressed
+venusbackend.riscv.insts.dsl.parsers.extensions.floating
+venusbackend.riscv.insts.dsl.relocators
+venusbackend.riscv.insts.dsl.types
+venusbackend.riscv.insts.dsl.types.base
+venusbackend.riscv.insts.dsl.types.extensions.atomic
+venusbackend.riscv.insts.dsl.types.extensions.compressed
+venusbackend.riscv.insts.dsl.types.extensions.floating
+venusbackend.riscv.insts.floating
+venusbackend.riscv.insts.floating.double.i
+venusbackend.riscv.insts.floating.double.r
+venusbackend.riscv.insts.floating.double.s
+venusbackend.riscv.insts.floating.single.i
+venusbackend.riscv.insts.floating.single.r
+venusbackend.riscv.insts.floating.single.s
+venusbackend.riscv.insts.integer.base.i
+venusbackend.riscv.insts.integer.base.i.ecall
+venusbackend.riscv.insts.integer.base.r
+venusbackend.riscv.insts.integer.base.s
+venusbackend.riscv.insts.integer.base.sb
+venusbackend.riscv.insts.integer.base.u
+venusbackend.riscv.insts.integer.base.uj
+venusbackend.riscv.insts.integer.extensions.atomic.r
+venusbackend.riscv.insts.integer.extensions.compressed.ca
+venusbackend.riscv.insts.integer.extensions.compressed.ci
+venusbackend.riscv.insts.integer.extensions.compressed.cr
+venusbackend.riscv.insts.integer.extensions.multiply.r
+venusbackend.simulator
+venusbackend.simulator.cache
+venusbackend.simulator.diffs
+venusbackend.simulator.plugins
+venusbackend.utils

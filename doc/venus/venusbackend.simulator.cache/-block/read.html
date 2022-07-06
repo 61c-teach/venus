@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Block.read - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator.cache</a>&nbsp;/&nbsp;<a href="index.html">Block</a>&nbsp;/&nbsp;<a href="./read.html">read</a><br/>
+<br/>
+<h1>read</h1>
+<a name="venusbackend.simulator.cache.Block$read(kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Block$read(kotlin.Int, kotlin.Int)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Block$read(kotlin.Int, kotlin.Int)/useCounter">useCounter</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Returns the word (32 bytes) of data associated with a particular word
+address. Both data and address are expressed as (base 10) ints at this
+level.</p>
+<h3>Parameters</h3>
+<p><a name="address"></a>
+<code>address</code> - the 32-bit address (as an int) at which to enter the data</p>
+<p><a name="recentUse"></a>
+<code>recentUse</code> - an update to the recentUse field</p>
+<p><strong>Pre</strong><br/>
+Check that this block is valid and that the address exists
+in this block before calling this function.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Memory - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator</a>&nbsp;/&nbsp;<a href="./index.html">Memory</a><br/>
+<br/>
+<h1>Memory</h1>
+<code><span class="keyword">class </span><span class="identifier">Memory</span></code>
+<p>A class representing a computer's memory.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>A class representing a computer's memory.</p>
+<code><span class="identifier">Memory</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="load-byte.html">loadByte</a></h4>
+</td>
+<td>
+<p>Loads an unsigned byte from memory</p>
+<code><span class="keyword">fun </span><span class="identifier">loadByte</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$loadByte(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-half-word.html">loadHalfWord</a></h4>
+</td>
+<td>
+<p>Loads an unsigned halfword from memory</p>
+<code><span class="keyword">fun </span><span class="identifier">loadHalfWord</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$loadHalfWord(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-long.html">loadLong</a></h4>
+</td>
+<td>
+<p>Loads a long from memory</p>
+<code><span class="keyword">fun </span><span class="identifier">loadLong</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$loadLong(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-word.html">loadWord</a></h4>
+</td>
+<td>
+<p>Loads a word from memory</p>
+<code><span class="keyword">fun </span><span class="identifier">loadWord</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$loadWord(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-byte.html">removeByte</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeByte</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$removeByte(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-byte.html">storeByte</a></h4>
+</td>
+<td>
+<p>Stores a byte in memory, truncating the given Int if necessary</p>
+<code><span class="keyword">fun </span><span class="identifier">storeByte</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$storeByte(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Memory$storeByte(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-half-word.html">storeHalfWord</a></h4>
+</td>
+<td>
+<p>Stores a halfword in memory, truncating the given Int if necessary</p>
+<code><span class="keyword">fun </span><span class="identifier">storeHalfWord</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$storeHalfWord(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Memory$storeHalfWord(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-long.html">storeLong</a></h4>
+</td>
+<td>
+<p>Stores a word in memory</p>
+<code><span class="keyword">fun </span><span class="identifier">storeLong</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$storeLong(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Memory$storeLong(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-word.html">storeWord</a></h4>
+</td>
+<td>
+<p>Stores a word in memory</p>
+<code><span class="keyword">fun </span><span class="identifier">storeWord</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Memory$storeWord(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Memory$storeWord(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

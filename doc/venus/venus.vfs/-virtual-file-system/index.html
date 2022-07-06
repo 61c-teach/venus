@@ -1,0 +1,241 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>VirtualFileSystem - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venus.vfs</a>&nbsp;/&nbsp;<a href="./index.html">VirtualFileSystem</a><br/>
+<br/>
+<h1>VirtualFileSystem</h1>
+<code><span class="keyword">class </span><span class="identifier">VirtualFileSystem</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">VirtualFileSystem</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$<init>(kotlin.String, venusbackend.simulator.SimulatorSettings)/defaultDriveName">defaultDriveName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$<init>(kotlin.String, venusbackend.simulator.SimulatorSettings)/simSettings">simSettings</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator-settings/index.html"><span class="identifier">SimulatorSettings</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SimulatorSettings()<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="current-location.html">currentLocation</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">currentLocation</span><span class="symbol">: </span><a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="default-drive-name.html">defaultDriveName</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">defaultDriveName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sentinel.html">sentinel</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sentinel</span><span class="symbol">: </span><a href="../-v-f-s-drive/index.html"><span class="identifier">VFSDrive</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sim-settings.html">simSettings</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">simSettings</span><span class="symbol">: </span><a href="../../venusbackend.simulator/-simulator-settings/index.html"><span class="identifier">SimulatorSettings</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-file.html">addFile</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addFile</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$addFile(kotlin.String, kotlin.String, venus.vfs.VFSObject)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$addFile(kotlin.String, kotlin.String, venus.vfs.VFSObject)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$addFile(kotlin.String, kotlin.String, venus.vfs.VFSObject)/loc">loc</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a>&nbsp;<span class="symbol">=</span>&nbsp;currentLocation<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="cat.html">cat</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cat</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$cat(kotlin.String)/filedir">filedir</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="cd.html">cd</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cd</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$cd(kotlin.String)/dir">dir</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="chdir.html">chdir</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">chdir</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$chdir(kotlin.String, venus.vfs.VFSObject)/dir">dir</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$chdir(kotlin.String, venus.vfs.VFSObject)/curloc">curloc</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="files-from-prefix.html">filesFromPrefix</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">filesFromPrefix</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$filesFromPrefix(kotlin.String, kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$filesFromPrefix(kotlin.String, kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-object-from-path.html">getObjectFromPath</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getObjectFromPath</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$getObjectFromPath(kotlin.String, kotlin.Boolean, venus.vfs.VFSObject)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$getObjectFromPath(kotlin.String, kotlin.Boolean, venus.vfs.VFSObject)/make">make</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$getObjectFromPath(kotlin.String, kotlin.Boolean, venus.vfs.VFSObject)/location">location</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-parent-from-object.html">getParentFromObject</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getParentFromObject</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$getParentFromObject(venus.vfs.VFSObject)/obj">obj</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load.html">load</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ls.html">ls</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ls</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$ls(kotlin.String, kotlin.Boolean)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$ls(kotlin.String, kotlin.Boolean)/html_color_code">html_color_code</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="make-file-in-dir.html">makeFileInDir</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">makeFileInDir</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$makeFileInDir(kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-v-f-s-file/index.html"><span class="identifier">VFSFile</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mkdir.html">mkdir</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">mkdir</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$mkdir(kotlin.String)/dirName">dirName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mount-drive.html">mountDrive</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">mountDrive</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$mountDrive(kotlin.String, venus.vfs.VFSMountedDriveHandler, venus.vfs.VFSObject)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$mountDrive(kotlin.String, venus.vfs.VFSMountedDriveHandler, venus.vfs.VFSObject)/handler">handler</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-mounted-drive-handler/index.html"><span class="identifier">VFSMountedDriveHandler</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$mountDrive(kotlin.String, venus.vfs.VFSMountedDriveHandler, venus.vfs.VFSObject)/loc">loc</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a>&nbsp;<span class="symbol">=</span>&nbsp;currentLocation<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="parse.html">parse</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$parse(kotlin.String)/vfsString">vfsString</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="path.html">path</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">path</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$path(kotlin.Boolean)/html_color_code">html_color_code</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove.html">remove</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">remove</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$remove(kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reset.html">reset</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rm.html">rm</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rm</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$rm(kotlin.String, venus.vfs.VFSObject)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$rm(kotlin.String, venus.vfs.VFSObject)/curloc">curloc</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="save.html">save</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">save</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stringify.html">stringify</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stringify</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="touch.html">touch</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">touch</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$touch(kotlin.String)/filename">filename</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write.html">write</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem$write(kotlin.String, kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VirtualFileSystem$write(kotlin.String, kotlin.String)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-l-s-name.html">LSName</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">LSName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-path.html">getPath</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPath</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem.Companion$getPath(kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="make-path.html">makePath</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">makePath</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VirtualFileSystem.Companion$makePath(kotlin.collections.ArrayList((kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

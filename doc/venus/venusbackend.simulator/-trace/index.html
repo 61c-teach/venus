@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Trace - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator</a>&nbsp;/&nbsp;<a href="./index.html">Trace</a><br/>
+<br/>
+<h1>Trace</h1>
+<code><span class="keyword">class </span><span class="identifier">Trace</span></code>
+<p>Created by Thaumic on 7/14/2018.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Created by Thaumic on 7/14/2018.</p>
+<code><span class="identifier">Trace</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Trace$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.String, kotlin.Array((kotlin.Number)), venusbackend.riscv.MachineCode, kotlin.Int, kotlin.Number, venusbackend.simulator.SimulatorError)/branched">branched</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Trace$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.String, kotlin.Array((kotlin.Number)), venusbackend.riscv.MachineCode, kotlin.Int, kotlin.Number, venusbackend.simulator.SimulatorError)/jumped">jumped</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Trace$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.String, kotlin.Array((kotlin.Number)), venusbackend.riscv.MachineCode, kotlin.Int, kotlin.Number, venusbackend.simulator.SimulatorError)/ecallMsg">ecallMsg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Trace$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.String, kotlin.Array((kotlin.Number)), venusbackend.riscv.MachineCode, kotlin.Int, kotlin.Number, venusbackend.simulator.SimulatorError)/regs">regs</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Trace$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.String, kotlin.Array((kotlin.Number)), venusbackend.riscv.MachineCode, kotlin.Int, kotlin.Number, venusbackend.simulator.SimulatorError)/inst">inst</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Trace$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.String, kotlin.Array((kotlin.Number)), venusbackend.riscv.MachineCode, kotlin.Int, kotlin.Number, venusbackend.simulator.SimulatorError)/line">line</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Trace$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.String, kotlin.Array((kotlin.Number)), venusbackend.riscv.MachineCode, kotlin.Int, kotlin.Number, venusbackend.simulator.SimulatorError)/pc">pc</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Trace$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.String, kotlin.Array((kotlin.Number)), venusbackend.riscv.MachineCode, kotlin.Int, kotlin.Number, venusbackend.simulator.SimulatorError)/error">error</span><span class="symbol">:</span>&nbsp;<a href="../-simulator-error/index.html"><span class="identifier">SimulatorError</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="branched.html">branched</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">branched</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ecall-msg.html">ecallMsg</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ecallMsg</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="error.html">error</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">error</span><span class="symbol">: </span><a href="../-simulator-error/index.html"><span class="identifier">SimulatorError</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="inst.html">inst</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">inst</span><span class="symbol">: </span><a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="jumped.html">jumped</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">jumped</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="line.html">line</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">line</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pc.html">pc</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pc</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="prev-trace.html">prevTrace</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">prevTrace</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Trace</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="regs.html">regs</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">regs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="copy.html">copy</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Trace</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-p-c.html">getPC</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPC</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-string.html">getString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Trace$getString(kotlin.String, kotlin.Int)/format">format</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Trace$getString(kotlin.String, kotlin.Int)/base">base</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

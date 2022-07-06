@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AssemblerError - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.assembler</a>&nbsp;/&nbsp;<a href="./index.html">AssemblerError</a><br/>
+<br/>
+<h1>AssemblerError</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AssemblerError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a></code>
+<p>Thrown when errors occur during assembly.</p>
+<p><strong>Todo</strong><br/>
+split this into AssemblerUserError and AssemblerError</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">AssemblerError</span><span class="symbol">(</span><span class="identifier" id="venusbackend.assembler.AssemblerError$<init>(kotlin.String, venusbackend.assembler.DebugInfo)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="venusbackend.assembler.AssemblerError$<init>(kotlin.String, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code><br/>
+<code><span class="identifier">AssemblerError</span><span class="symbol">(</span><span class="identifier" id="venusbackend.assembler.AssemblerError$<init>(kotlin.Int, kotlin.Throwable)/errorLine">errorLine</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.assembler.AssemblerError$<init>(kotlin.Int, kotlin.Throwable)/e">e</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">AssemblerError</span><span class="symbol">(</span><span class="identifier" id="venusbackend.assembler.AssemblerError$<init>(kotlin.String, kotlin.Throwable, venusbackend.assembler.DebugInfo)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="venusbackend.assembler.AssemblerError$<init>(kotlin.String, kotlin.Throwable, venusbackend.assembler.DebugInfo)/errorType">errorType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.assembler.AssemblerError$<init>(kotlin.String, kotlin.Throwable, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="dbg.html">dbg</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dbg</span><span class="symbol">: </span><a href="../-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="error-type.html">errorType</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">errorType</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="line.html">line</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">line</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="parse_msg.html">parse_msg</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">parse_msg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.assembler.AssemblerError.Companion$parse_msg(kotlin.String, venusbackend.assembler.DebugInfo)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="venusbackend.assembler.AssemblerError.Companion$parse_msg(kotlin.String, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-preprocessor-error/index.html">PreprocessorError</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PreprocessorError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AssemblerError</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

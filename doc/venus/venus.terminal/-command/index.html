@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Command - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venus.terminal</a>&nbsp;/&nbsp;<a href="./index.html">Command</a><br/>
+<br/>
+<h1>Command</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Command</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">Command</span><span class="symbol">(</span><span class="identifier" id="venus.terminal.Command$<init>(kotlin.String, kotlin.Function3((kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean, )), kotlin.Function3((kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean, kotlin.collections.MutableList((kotlin.Any)))), kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.terminal.Command$<init>(kotlin.String, kotlin.Function3((kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean, )), kotlin.Function3((kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean, kotlin.collections.MutableList((kotlin.Any)))), kotlin.String)/execute">execute</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">parsedInput</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">t</span><span class="symbol">:</span>&nbsp;<a href="../-terminal/index.html"><span class="identifier">Terminal</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">sudo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ a, b, c -&gt; throw NotImplementedError() }<span class="symbol">, </span><span class="identifier" id="venus.terminal.Command$<init>(kotlin.String, kotlin.Function3((kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean, )), kotlin.Function3((kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean, kotlin.collections.MutableList((kotlin.Any)))), kotlin.String)/tab">tab</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">parsedInput</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">t</span><span class="symbol">:</span>&nbsp;<a href="../-terminal/index.html"><span class="identifier">Terminal</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">sudo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;{ a, b, c -&gt; throw NotImplementedError() }<span class="symbol">, </span><span class="identifier" id="venus.terminal.Command$<init>(kotlin.String, kotlin.Function3((kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean, )), kotlin.Function3((kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean, kotlin.collections.MutableList((kotlin.Any)))), kotlin.String)/help">help</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"Command does not have a help yet!"<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="execute.html">execute</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">execute</span><span class="symbol">: </span><span class="symbol">(</span><span class="identifier">parsedInput</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">t</span><span class="symbol">:</span>&nbsp;<a href="../-terminal/index.html"><span class="identifier">Terminal</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">sudo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="help.html">help</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">help</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="name.html">name</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tab.html">tab</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">tab</span><span class="symbol">: </span><span class="symbol">(</span><span class="identifier">parsedInput</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">t</span><span class="symbol">:</span>&nbsp;<a href="../-terminal/index.html"><span class="identifier">Terminal</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">sudo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="file-tab-complete.html">fileTabComplete</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fileTabComplete</span><span class="symbol">(</span><span class="identifier" id="venus.terminal.Command.Companion$fileTabComplete(kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean)/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="venus.terminal.Command.Companion$fileTabComplete(kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean)/t">t</span><span class="symbol">:</span>&nbsp;<a href="../-terminal/index.html"><span class="identifier">Terminal</span></a><span class="symbol">, </span><span class="identifier" id="venus.terminal.Command.Companion$fileTabComplete(kotlin.collections.MutableList((kotlin.String)), venus.terminal.Terminal, kotlin.Boolean)/sudo">sudo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="venus.terminal.Command.Companion$get(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-commands.html">getCommands</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCommands</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

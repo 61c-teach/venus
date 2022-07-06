@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FlagValueActionBase - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.cli</a>&nbsp;/&nbsp;<a href="./index.html">FlagValueActionBase</a><br/>
+<br/>
+<h1>FlagValueActionBase</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">FlagValueActionBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-argument-action/index.html"><span class="identifier">ArgumentAction</span></a><span class="symbol">, </span><a href="../-help-entry/index.html"><span class="identifier">HelpEntry</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">FlagValueActionBase</span><span class="symbol">(</span><span class="identifier" id="venusbackend.cli.FlagValueActionBase$<init>(kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.String)/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="venusbackend.cli.FlagValueActionBase$<init>(kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.String)/valueSyntax">valueSyntax</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.cli.FlagValueActionBase$<init>(kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.String)/help">help</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="flags.html">flags</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">flags</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="value-syntax.html">valueSyntax</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">valueSyntax</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="print-help.html">printHelp</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">printHelp</span><span class="symbol">(</span><span class="identifier" id="venusbackend.cli.FlagValueActionBase$printHelp(venusbackend.cli.HelpPrinter)/helpPrinter">helpPrinter</span><span class="symbol">:</span>&nbsp;<a href="../-help-printer/index.html"><span class="identifier">HelpPrinter</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-flag-value-argument-base/index.html">FlagValueArgumentBase</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">FlagValueArgumentBase</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FlagValueActionBase</span></a><span class="symbol">, </span><a href="../-argument-value/index.html"><span class="identifier">ArgumentValue</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

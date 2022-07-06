@@ -1,0 +1,296 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MallocNode - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.riscv.insts.integer.base.i.ecall</a>&nbsp;/&nbsp;<a href="./index.html">MallocNode</a><br/>
+<br/>
+<h1>MallocNode</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MallocNode</span></code>
+<p>This is a wrapper file for all basic malloc operations.
+Malloc Node has the format:
+char*<a href="#">0</a> where this is of size size.
+uppermagic
+prevNode
+nextNode
+free
+size
+lowermagic
+nodeAddr^</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>This is a wrapper file for all basic malloc operations.
+Malloc Node has the format:
+char*<a href="#">0</a> where this is of size size.
+uppermagic
+prevNode
+nextNode
+free
+size
+lowermagic
+nodeAddr^</p>
+<code><span class="identifier">MallocNode</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/free">free</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/nextNode">nextNode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/prevNode">prevNode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/nodeAddr">nodeAddr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/aupperMagic">aupperMagic</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;upperMagic<span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/alowerMagic">alowerMagic</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;lowerMagic<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="alower-magic.html">alowerMagic</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">alowerMagic</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="aupper-magic.html">aupperMagic</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">aupperMagic</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="free.html">free</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">free</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="next-node.html">nextNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">nextNode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="node-addr.html">nodeAddr</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">nodeAddr</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="prev-node.html">prevNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">prevNode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="size.html">size</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">size</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="allocate-node.html">allocateNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">allocateNode</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$allocateNode(venusbackend.simulator.Simulator, kotlin.Int, kotlin.Boolean)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$allocateNode(venusbackend.simulator.Simulator, kotlin.Int, kotlin.Boolean)/wantedSize">wantedSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$allocateNode(venusbackend.simulator.Simulator, kotlin.Int, kotlin.Boolean)/calloc">calloc</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="can-fit.html">canFit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">canFit</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$canFit(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="data-addr.html">dataAddr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dataAddr</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="free-node.html">freeNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">freeNode</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$freeNode(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-next-node.html">getNextNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getNextNode</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$getNextNode(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MallocNode</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-prev-node.html">getPrevNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPrevNode</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$getPrevNode(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MallocNode</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-free.html">isFree</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isFree</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-next-null.html">isNextNull</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isNextNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-null.html">isNull</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-prev-null.html">isPrevNull</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isPrevNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-sentinel.html">isSentinel</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isSentinel</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-free.html">storeFree</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeFree</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$storeFree(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-magic.html">storeMagic</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeMagic</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$storeMagic(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-next-node.html">storeNextNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeNextNode</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$storeNextNode(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-node.html">storeNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeNode</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$storeNode(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-prev-node.html">storePrevNode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storePrevNode</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$storePrevNode(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-size.html">storeSize</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeSize</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode$storeSize(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="high-buffer.html">highBuffer</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">highBuffer</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="low-buffer.html">lowBuffer</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">lowBuffer</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="lower-magic.html">lowerMagic</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">lowerMagic</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="min-size.html">minSize</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">minSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="nodes.html">nodes</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">nodes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="./index.html"><span class="identifier">MallocNode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sizeof.html">sizeof</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">sizeof</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="upper-magic.html">upperMagic</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">upperMagic</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="load-block.html">loadBlock</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadBlock</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode.Companion$loadBlock(venusbackend.simulator.Simulator, kotlin.Int, kotlin.Boolean)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode.Companion$loadBlock(venusbackend.simulator.Simulator, kotlin.Int, kotlin.Boolean)/nodeAddr">nodeAddr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MallocNode.Companion$loadBlock(venusbackend.simulator.Simulator, kotlin.Int, kotlin.Boolean)/ignore_magic">ignore_magic</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MallocNode</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

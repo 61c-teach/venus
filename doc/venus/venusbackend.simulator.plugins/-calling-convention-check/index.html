@@ -1,0 +1,310 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CallingConventionCheck - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator.plugins</a>&nbsp;/&nbsp;<a href="./index.html">CallingConventionCheck</a><br/>
+<br/>
+<h1>CallingConventionCheck</h1>
+<code><span class="keyword">class </span><span class="identifier">CallingConventionCheck</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-simulator-plugin/index.html"><span class="identifier">SimulatorPlugin</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">CallingConventionCheck</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$<init>(kotlin.Boolean)/returnOnlya0">returnOnlya0</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-active-regs.html">ActiveRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ActiveRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="a-regs.html">aRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">aRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="callee-regs.html">calleeRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">calleeRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="caller-regs.html">callerRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">callerRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="current-active-regs.html">currentActiveRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">currentActiveRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="current-saved-regs.html">currentSavedRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">currentSavedRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="error-cnt.html">errorCnt</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">errorCnt</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="prev-p-c.html">prevPC</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">prevPC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="return-addresses.html">returnAddresses</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">returnAddresses</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="return-onlya0.html">returnOnlya0</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">returnOnlya0</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-saved-regs.html">SavedRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">SavedRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-saved-regs-values.html">SavedRegsValues</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">SavedRegsValues</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="s-regs.html">sRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">sRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="t-regs.html">tRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">tRegs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-ret-addr.html">addRetAddr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addRetAddr</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$addRetAddr(kotlin.Number)/n">n</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="copy-over-a-regs.html">copyOverARegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copyOverARegs</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$copyOverARegs(kotlin.Boolean)/new">new</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="finish.html">finish</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">finish</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$finish(venusbackend.simulator.Simulator, kotlin.Any)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$finish(venusbackend.simulator.Simulator, kotlin.Any)/any">any</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">finish</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="geta-regs.html">getaRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getaRegs</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-callee-saved-registers.html">getCalleeSavedRegisters</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCalleeSavedRegisters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-caller-saved-registers.html">getCallerSavedRegisters</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCallerSavedRegisters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-dbg.html">getDbg</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDbg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$getDbg(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-ret-addr.html">getRetAddr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRetAddr</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-source-regs.html">getSourceRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSourceRegs</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$getSourceRegs(venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="gets-regs.html">getsRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getsRegs</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="gett-regs.html">gettRegs</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">gettRegs</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-call.html">handleCall</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleCall</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$handleCall(venusbackend.simulator.Simulator, kotlin.Number)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$handleCall(venusbackend.simulator.Simulator, kotlin.Number)/nextPC">nextPC</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-dst-register.html">handleDstRegister</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleDstRegister</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$handleDstRegister(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.RegisterDiff, venusbackend.riscv.MachineCode)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$handleDstRegister(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.RegisterDiff, venusbackend.riscv.MachineCode)/post">post</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator.diffs/-register-diff/index.html"><span class="identifier">RegisterDiff</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$handleDstRegister(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.RegisterDiff, venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-return.html">handleReturn</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleReturn</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$handleReturn(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-source-registers.html">handleSourceRegisters</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleSourceRegisters</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$handleSourceRegisters(venusbackend.simulator.Simulator, venusbackend.riscv.MachineCode)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$handleSourceRegisters(venusbackend.simulator.Simulator, venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init.html">init</a></h4>
+</td>
+<td>
+<p>called on every step of the simulation (after <code>sim.step()</code>)</p>
+<code><span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$init(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-call.html">isCall</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isCall</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isCall(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.PCDiff, venusbackend.simulator.diffs.PCDiff, venusbackend.riscv.MachineCode)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isCall(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.PCDiff, venusbackend.simulator.diffs.PCDiff, venusbackend.riscv.MachineCode)/pre">pre</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator.diffs/-p-c-diff/index.html"><span class="identifier">PCDiff</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isCall(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.PCDiff, venusbackend.simulator.diffs.PCDiff, venusbackend.riscv.MachineCode)/post">post</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator.diffs/-p-c-diff/index.html"><span class="identifier">PCDiff</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isCall(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.PCDiff, venusbackend.simulator.diffs.PCDiff, venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-m-v.html">isMV</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isMV</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isMV(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.RegisterDiff, venusbackend.riscv.MachineCode)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isMV(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.RegisterDiff, venusbackend.riscv.MachineCode)/post">post</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator.diffs/-register-diff/index.html"><span class="identifier">RegisterDiff</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isMV(venusbackend.simulator.Simulator, venusbackend.simulator.diffs.RegisterDiff, venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-return.html">isReturn</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isReturn</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isReturn(venusbackend.riscv.MachineCode, venusbackend.simulator.diffs.PCDiff)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isReturn(venusbackend.riscv.MachineCode, venusbackend.simulator.diffs.PCDiff)/newPCDiff">newPCDiff</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator.diffs/-p-c-diff/index.html"><span class="identifier">PCDiff</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-save.html">isSave</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isSave</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$isSave(venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-step.html">onStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onStep</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$onStep(venusbackend.simulator.Simulator, venusbackend.riscv.MachineCode, kotlin.Number)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$onStep(venusbackend.simulator.Simulator, venusbackend.riscv.MachineCode, kotlin.Number)/inst">inst</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$onStep(venusbackend.simulator.Simulator, venusbackend.riscv.MachineCode, kotlin.Number)/prevPC">prevPC</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pop-ret-addr.html">popRetAddr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">popRetAddr</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="print-violation.html">printViolation</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">printViolation</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$printViolation(venusbackend.simulator.Simulator, kotlin.String)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$printViolation(venusbackend.simulator.Simulator, kotlin.String)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="print-warning.html">printWarning</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">printWarning</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$printWarning(venusbackend.simulator.Simulator, kotlin.String)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$printWarning(venusbackend.simulator.Simulator, kotlin.String)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reset.html">reset</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.CallingConventionCheck$reset(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

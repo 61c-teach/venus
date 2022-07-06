@@ -1,0 +1,132 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Block - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator.cache</a>&nbsp;/&nbsp;<a href="./index.html">Block</a><br/>
+<br/>
+<h1>Block</h1>
+<code><span class="keyword">class </span><span class="identifier">Block</span></code>
+<p>A collection of adjacent word entries within the cHandler. The number of entries
+is determined by blocksize.</p>
+<p><strong>Author</strong><br/>
+Deborah Hawkins</p>
+<p><strong>Author</strong><br/>
+Rishi Dewan</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>A collection of adjacent word entries within the cHandler. The number of entries
+is determined by blocksize.</p>
+<code><span class="identifier">Block</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Block$<init>(kotlin.Int)/blocksize">blocksize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="block-state.html">blockState</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">blockState</span><span class="symbol">: </span><a href="../-block-state/index.html"><span class="identifier">BlockState</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-dirty.html">isDirty</a></h4>
+</td>
+<td>
+<p>Returns true if the data contained in this block has been updated or
+false if it is still consistent with data in main memory.</p>
+<code><span class="keyword">var </span><span class="identifier">isDirty</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid.html">isValid</a></h4>
+</td>
+<td>
+<p>Returns true if the data contained in this block is valid or false if it
+has not been set yet.</p>
+<code><span class="keyword">var </span><span class="identifier">isValid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="recent-use.html">recentUse</a></h4>
+</td>
+<td>
+<p>Returns an int which indicates when the block was last used. Higher
+numbers indicate more recent use.</p>
+<code><span class="keyword">var </span><span class="identifier">recentUse</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tag.html">tag</a></h4>
+</td>
+<td>
+<p>Returns the tag field of the address. The containing set uses this to
+find an exact address.</p>
+<code><span class="keyword">var </span><span class="identifier">tag</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="copy.html">copy</a></h4>
+</td>
+<td>
+<p>Returns the array of all words in the block. Used when the block is dirty
+and in the least recently used block, so the data can be written back to
+memory. This allocates new space for other data.</p>
+<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Block</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read.html">read</a></h4>
+</td>
+<td>
+<p>Returns the word (32 bytes) of data associated with a particular word
+address. Both data and address are expressed as (base 10) ints at this
+level.</p>
+<code><span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Block$read(kotlin.Int, kotlin.Int)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Block$read(kotlin.Int, kotlin.Int)/useCounter">useCounter</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<p>Prints the block values to standard out.</p>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write.html">write</a></h4>
+</td>
+<td>
+<p>Replaces a word of data within the block for the byte address
+specified.</p>
+<code><span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Block$write(kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Block$write(kotlin.Int, kotlin.Int)/useCounter">useCounter</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-block.html">writeBlock</a></h4>
+</td>
+<td>
+<p>Fills the block with new data. Should only be used when the block is not
+dirty and is about to be used for a read or write.</p>
+<code><span class="keyword">fun </span><span class="identifier">writeBlock</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Block$writeBlock(kotlin.Int)/tag">tag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

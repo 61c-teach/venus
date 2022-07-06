@@ -1,0 +1,266 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Program - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.riscv</a>&nbsp;/&nbsp;<a href="./index.html">Program</a><br/>
+<br/>
+<h1>Program</h1>
+<code><span class="keyword">class </span><span class="identifier">Program</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">Program</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$<init>(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"anonymous"<span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$<init>(kotlin.String, kotlin.String)/absPath">absPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="abs-path.html">absPath</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">absPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="data-relocation-table.html">dataRelocationTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">dataRelocationTable</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.linker/-data-relocation-info/index.html"><span class="identifier">DataRelocationInfo</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="data-segment.html">dataSegment</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">dataSegment</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html"><span class="identifier">Byte</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="data-size.html">dataSize</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dataSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="debug-info.html">debugInfo</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">debugInfo</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.assembler/-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="equivs.html">equivs</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">equivs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="imports.html">imports</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">imports</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-import/index.html"><span class="identifier">Import</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="insts.html">insts</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">insts</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="labels.html">labels</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">labels</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="local-references.html">localReferences</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">localReferences</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-set/index.html"><span class="identifier">MutableSet</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="name.html">name</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="relocation-table.html">relocationTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">relocationTable</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.linker/-relocation-info/index.html"><span class="identifier">RelocationInfo</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="text-size.html">textSize</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">textSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add.html">add</a></h4>
+</td>
+<td>
+<p>Adds an instruction to the program, and increments the text size.</p>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$add(venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-data-relocation.html">addDataRelocation</a></h4>
+</td>
+<td>
+<p>Adds a line to the data relocation table.</p>
+<code><span class="keyword">fun </span><span class="identifier">addDataRelocation</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$addDataRelocation(kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/label">label</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addDataRelocation(kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/labelOffset">labelOffset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addDataRelocation(kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;textSize<span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addDataRelocation(kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.assembler/-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-debug-info.html">addDebugInfo</a></h4>
+</td>
+<td>
+<p>Adds debug info to the instruction currently being assembled.</p>
+<code><span class="keyword">fun </span><span class="identifier">addDebugInfo</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$addDebugInfo(venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.assembler/-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-equ.html">addEqu</a></h4>
+</td>
+<td>
+<p>Adds a symbol defined by .equiv, .equ, or .set.</p>
+<code><span class="keyword">fun </span><span class="identifier">addEqu</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$addEqu(kotlin.String, kotlin.String)/label">label</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addEqu(kotlin.String, kotlin.String)/defn">defn</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-import.html">addImport</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addImport</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$addImport(kotlin.String, kotlin.Boolean)/filepath">filepath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addImport(kotlin.String, kotlin.Boolean)/relative">relative</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-label.html">addLabel</a></h4>
+</td>
+<td>
+<p>Adds a label with a given offset to the program.</p>
+<code><span class="keyword">fun </span><span class="identifier">addLabel</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$addLabel(kotlin.String, kotlin.Int)/label">label</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addLabel(kotlin.String, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-relocation.html">addRelocation</a></h4>
+</td>
+<td>
+<p>Adds a line to the relocation table.</p>
+<code><span class="keyword">fun </span><span class="identifier">addRelocation</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$addRelocation(venusbackend.riscv.insts.dsl.relocators.Relocator, kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/relocator">relocator</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.dsl.relocators/-relocator/index.html"><span class="identifier">Relocator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addRelocation(venusbackend.riscv.insts.dsl.relocators.Relocator, kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/label">label</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addRelocation(venusbackend.riscv.insts.dsl.relocators.Relocator, kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/labelOffset">labelOffset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addRelocation(venusbackend.riscv.insts.dsl.relocators.Relocator, kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;textSize<span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$addRelocation(venusbackend.riscv.insts.dsl.relocators.Relocator, kotlin.String, kotlin.Int, kotlin.Int, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.assembler/-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-to-data.html">addToData</a></h4>
+</td>
+<td>
+<p>Adds a byte of data to the program, and increments the data size.</p>
+<code><span class="keyword">fun </span><span class="identifier">addToData</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$addToData(kotlin.Byte)/byte">byte</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html"><span class="identifier">Byte</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="assemble-dependencies.html">assembleDependencies</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">assembleDependencies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">Program</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="dump.html">dump</a></h4>
+</td>
+<td>
+<p>Dumps the instructions.</p>
+<code><span class="keyword">fun </span><span class="identifier">dump</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-label-offset.html">getLabelOffset</a></h4>
+</td>
+<td>
+<p>Gets the <em>relative</em> label offset, or null if it does not exist.</p>
+<code><span class="keyword">fun </span><span class="identifier">getLabelOffset</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$getLabelOffset(kotlin.String, kotlin.Int, venusbackend.assembler.DebugInfo)/label">label</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$getLabelOffset(kotlin.String, kotlin.Int, venusbackend.assembler.DebugInfo)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$getLabelOffset(kotlin.String, kotlin.Int, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.assembler/-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-addr-global-label.html">isAddrGlobalLabel</a></h4>
+</td>
+<td>
+<p>checks if address is of a global label</p>
+<code><span class="keyword">fun </span><span class="identifier">isAddrGlobalLabel</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$isAddrGlobalLabel(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-global-label.html">isGlobalLabel</a></h4>
+</td>
+<td>
+<p>Checks if a label is global.</p>
+<code><span class="keyword">fun </span><span class="identifier">isGlobalLabel</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$isGlobalLabel(kotlin.String)/label">label</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="label-offset-part.html">labelOffsetPart</a></h4>
+</td>
+<td>
+<p>Return the numeric offset part of LABELARG, where LABELARG may be either
+ (result 0), + (result
+ as an Int), -,
++, or -.  Here,
+ refers to a .equiv'ed symbol that resolves to
+an immediate constant (as in .equiv value, 13).</p>
+<code><span class="keyword">fun </span><span class="identifier">labelOffsetPart</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$labelOffsetPart(kotlin.String, venusbackend.assembler.DebugInfo)/labelArg">labelArg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$labelOffsetPart(kotlin.String, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.assembler/-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="make-label-global.html">makeLabelGlobal</a></h4>
+</td>
+<td>
+<p>Makes a label global.</p>
+<code><span class="keyword">fun </span><span class="identifier">makeLabelGlobal</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$makeLabelGlobal(kotlin.String)/label">label</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="overwrite-data.html">overwriteData</a></h4>
+</td>
+<td>
+<p>Overwrites a byte of data in the program's data segment</p>
+<code><span class="keyword">fun </span><span class="identifier">overwriteData</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$overwriteData(kotlin.Int, kotlin.Byte)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$overwriteData(kotlin.Int, kotlin.Byte)/byte">byte</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html"><span class="identifier">Byte</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="symbol-part.html">symbolPart</a></h4>
+</td>
+<td>
+<p>Return the symbolic part of LABELARG, where LABELARG may be either
+, +, or -.</p>
+<code><span class="keyword">fun </span><span class="identifier">symbolPart</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.Program$symbolPart(kotlin.String, venusbackend.assembler.DebugInfo)/labelArg">labelArg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.Program$symbolPart(kotlin.String, venusbackend.assembler.DebugInfo)/dbg">dbg</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.assembler/-debug-info/index.html"><span class="identifier">DebugInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

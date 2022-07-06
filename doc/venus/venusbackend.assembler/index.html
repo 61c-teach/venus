@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>venusbackend.assembler - venus</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">venus</a>&nbsp;/&nbsp;<a href="./index.html">venusbackend.assembler</a><br/>
+<br/>
+<h2>Package venusbackend.assembler</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-assembler/index.html">Assembler</a></h4>
+</td>
+<td>
+<p>This singleton implements a simple two-pass assembler to transform files into programs.</p>
+<code><span class="keyword">object </span><span class="identifier">Assembler</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-assembler-output/index.html">AssemblerOutput</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AssemblerOutput</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-debug-info/index.html">DebugInfo</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">DebugInfo</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-debug-instruction/index.html">DebugInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">DebugInstruction</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-lexer/index.html">Lexer</a></h4>
+</td>
+<td>
+<p>A singleton which can be used to lex a given line.</p>
+<code><span class="keyword">object </span><span class="identifier">Lexer</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-line-tokens.html">LineTokens</a></h4>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">LineTokens</span>&nbsp;<span class="symbol">=</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-linter/index.html">Linter</a></h4>
+</td>
+<td>
+<p>Linter for RISC-V code</p>
+<code><span class="keyword">object </span><span class="identifier">Linter</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-lint-error/index.html">LintError</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">LintError</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-pass-one-output/index.html">PassOneOutput</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PassOneOutput</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-pseudo-dispatcher/index.html">PseudoDispatcher</a></h4>
+</td>
+<td>
+<p>Describes each instruction for writing</p>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">PseudoDispatcher</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-pseudo-writer/index.html">PseudoWriter</a></h4>
+</td>
+<td>
+<p>Converts a pseudoinstruction into TAL instructions.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PseudoWriter</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-assembler-error/index.html">AssemblerError</a></h4>
+</td>
+<td>
+<p>Thrown when errors occur during assembly.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AssemblerError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-assembler-warning/index.html">AssemblerWarning</a></h4>
+</td>
+<td>
+<p>Thrown when errors occur during assembly.</p>
+<code><span class="keyword">class </span><span class="identifier">AssemblerWarning</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-preprocessor-error/index.html">PreprocessorError</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PreprocessorError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-assembler-error/index.html"><span class="identifier">AssemblerError</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-pseudo-dispatcher-error/index.html">PseudoDispatcherError</a></h4>
+</td>
+<td>
+<p>Thrown when errors occur during assembly.</p>
+<code><span class="keyword">class </span><span class="identifier">PseudoDispatcherError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="p1warnings.html">p1warnings</a></h4>
+</td>
+<td>
+<p>Pass #1 of our two pass assembler.</p>
+<code><span class="keyword">val </span><span class="identifier">p1warnings</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="-assembler-warning/index.html"><span class="identifier">AssemblerWarning</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

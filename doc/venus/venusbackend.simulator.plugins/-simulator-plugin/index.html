@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SimulatorPlugin - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator.plugins</a>&nbsp;/&nbsp;<a href="./index.html">SimulatorPlugin</a><br/>
+<br/>
+<h1>SimulatorPlugin</h1>
+<code><span class="keyword">interface </span><span class="identifier">SimulatorPlugin</span></code>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="finish.html">finish</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">finish</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.SimulatorPlugin$finish(venusbackend.simulator.Simulator, kotlin.Any)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.SimulatorPlugin$finish(venusbackend.simulator.Simulator, kotlin.Any)/any">any</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init.html">init</a></h4>
+</td>
+<td>
+<p>called on every step of the simulation (after <code>sim.step()</code>)</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.SimulatorPlugin$init(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-step.html">onStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onStep</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.SimulatorPlugin$onStep(venusbackend.simulator.Simulator, venusbackend.riscv.MachineCode, kotlin.Number)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.SimulatorPlugin$onStep(venusbackend.simulator.Simulator, venusbackend.riscv.MachineCode, kotlin.Number)/inst">inst</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.plugins.SimulatorPlugin$onStep(venusbackend.simulator.Simulator, venusbackend.riscv.MachineCode, kotlin.Number)/prevPC">prevPC</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reset.html">reset</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.plugins.SimulatorPlugin$reset(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-calling-convention-check/index.html">CallingConventionCheck</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CallingConventionCheck</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SimulatorPlugin</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-coverage/index.html">Coverage</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SimulatorPlugin</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

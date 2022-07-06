@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>VFSFolder - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venus.vfs</a>&nbsp;/&nbsp;<a href="./index.html">VFSFolder</a><br/>
+<br/>
+<h1>VFSFolder</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VFSFolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">VFSFolder</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VFSFolder$<init>(kotlin.String, venus.vfs.VFSObject, venus.vfs.VFSMountedDriveHandler)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VFSFolder$<init>(kotlin.String, venus.vfs.VFSObject, venus.vfs.VFSMountedDriveHandler)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VFSFolder$<init>(kotlin.String, venus.vfs.VFSObject, venus.vfs.VFSMountedDriveHandler)/mountedHandler">mountedHandler</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-mounted-drive-handler/index.html"><span class="identifier">VFSMountedDriveHandler</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="contents.html">contents</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">contents</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="label.html">label</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">label</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mounted-children-helper.html">mountedChildrenHelper</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">mountedChildrenHelper</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mounted-handler.html">mountedHandler</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">mountedHandler</span><span class="symbol">: </span><a href="../-v-f-s-mounted-drive-handler/index.html"><span class="identifier">VFSMountedDriveHandler</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="name.html">name</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="parent.html">parent</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">parent</span><span class="symbol">: </span><a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="permissions.html">permissions</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">permissions</span><span class="symbol">: </span><a href="../-v-f-s-permissions/index.html"><span class="identifier">VFSPermissions</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="type.html">type</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">type</span><span class="symbol">: </span><a href="../-v-f-s-type/index.html"><span class="identifier">VFSType</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-file.html">addFile</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addFile</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VFSFolder$addFile(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-folder.html">addFolder</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addFolder</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VFSFolder$addFolder(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stringify.html">stringify</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">stringify</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-json-container/index.html"><span class="identifier">JsonContainer</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="inflate.html">inflate</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">inflate</span><span class="symbol">(</span><span class="identifier" id="venus.vfs.VFSFolder.Companion$inflate(venus.vfs.JsonContainer, venus.vfs.VFSObject)/jsonContainer">jsonContainer</span><span class="symbol">:</span>&nbsp;<a href="../-json-container/index.html"><span class="identifier">JsonContainer</span></a><span class="symbol">, </span><span class="identifier" id="venus.vfs.VFSFolder.Companion$inflate(venus.vfs.JsonContainer, venus.vfs.VFSObject)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-v-f-s-drive/index.html">VFSDrive</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">VFSDrive</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">VFSFolder</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

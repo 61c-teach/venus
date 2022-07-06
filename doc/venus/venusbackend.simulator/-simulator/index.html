@@ -1,0 +1,629 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Simulator - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator</a>&nbsp;/&nbsp;<a href="./index.html">Simulator</a><br/>
+<br/>
+<h1>Simulator</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Simulator</span></code>
+<p>Right now, this is a loose wrapper around SimulatorState
+Eventually, it will support debugging.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Right now, this is a loose wrapper around SimulatorState
+Eventually, it will support debugging.</p>
+<code><span class="identifier">Simulator</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$<init>(venusbackend.linker.LinkedProgram, venus.vfs.VirtualFileSystem, venusbackend.simulator.SimulatorSettings, venusbackend.simulator.SimulatorState, kotlin.Int)/linkedProgram">linkedProgram</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.linker/-linked-program/index.html"><span class="identifier">LinkedProgram</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$<init>(venusbackend.linker.LinkedProgram, venus.vfs.VirtualFileSystem, venusbackend.simulator.SimulatorSettings, venusbackend.simulator.SimulatorState, kotlin.Int)/VFS">VFS</span><span class="symbol">:</span>&nbsp;<a href="../../venus.vfs/-virtual-file-system/index.html"><span class="identifier">VirtualFileSystem</span></a>&nbsp;<span class="symbol">=</span>&nbsp;VirtualFileSystem("dummy")<span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$<init>(venusbackend.linker.LinkedProgram, venus.vfs.VirtualFileSystem, venusbackend.simulator.SimulatorSettings, venusbackend.simulator.SimulatorState, kotlin.Int)/settings">settings</span><span class="symbol">:</span>&nbsp;<a href="../-simulator-settings/index.html"><span class="identifier">SimulatorSettings</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SimulatorSettings()<span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$<init>(venusbackend.linker.LinkedProgram, venus.vfs.VirtualFileSystem, venusbackend.simulator.SimulatorSettings, venusbackend.simulator.SimulatorState, kotlin.Int)/state">state</span><span class="symbol">:</span>&nbsp;<a href="../-simulator-state/index.html"><span class="identifier">SimulatorState</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SimulatorState32()<span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$<init>(venusbackend.linker.LinkedProgram, venus.vfs.VirtualFileSystem, venusbackend.simulator.SimulatorSettings, venusbackend.simulator.SimulatorState, kotlin.Int)/simulatorID">simulatorID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="alloc.html">alloc</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">alloc</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.integer.base.i.ecall/-alloc/index.html"><span class="identifier">Alloc</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="args.html">args</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">args</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="at-watch-point.html">atWatchPoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">atWatchPoint</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-set/index.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><a href="../-watch-point/index.html"><span class="identifier">WatchPoint</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="branched.html">branched</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">branched</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ebreak.html">ebreak</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ebreak</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ecall-msg.html">ecallMsg</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ecallMsg</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exitcode.html">exitcode</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">exitcode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="files-handler.html">filesHandler</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">filesHandler</span><span class="symbol">: </span><a href="../-files-handler/index.html"><span class="identifier">FilesHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="history.html">history</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">history</span><span class="symbol">: </span><a href="../-history/index.html"><span class="identifier">History</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="inst-order-mapping.html">instOrderMapping</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">instOrderMapping</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="inv-inst-order-mapping.html">invInstOrderMapping</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">invInstOrderMapping</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="jumped.html">jumped</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">jumped</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="linked-program.html">linkedProgram</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">linkedProgram</span><span class="symbol">: </span><a href="../../venusbackend.linker/-linked-program/index.html"><span class="identifier">LinkedProgram</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="plugins.html">plugins</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">plugins</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-linked-hash-map/index.html"><span class="identifier">LinkedHashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="../../venusbackend.simulator.plugins/-simulator-plugin/index.html"><span class="identifier">SimulatorPlugin</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="post-instruction.html">postInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">postInstruction</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-diff/index.html"><span class="identifier">Diff</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pre-instruction.html">preInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">preInstruction</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-diff/index.html"><span class="identifier">Diff</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="settings.html">settings</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">settings</span><span class="symbol">: </span><a href="../-simulator-settings/index.html"><span class="identifier">SimulatorSettings</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="simulator-i-d.html">simulatorID</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">simulatorID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="state.html">state</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">state</span><span class="symbol">: </span><a href="../-simulator-state/index.html"><span class="identifier">SimulatorState</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stdout.html">stdout</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">stdout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-v-f-s.html">VFS</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">VFS</span><span class="symbol">: </span><a href="../../venus.vfs/-virtual-file-system/index.html"><span class="identifier">VirtualFileSystem</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-arg.html">addArg</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addArg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$addArg(kotlin.String)/arg">arg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">addArg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$addArg(kotlin.collections.List((kotlin.String)))/newargs">newargs</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-args-to-mem.html">addArgsToMem</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addArgsToMem</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-heap-space.html">addHeapSpace</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addHeapSpace</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$addHeapSpace(kotlin.Number)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-watchpoint.html">addWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$addWatchpoint(venusbackend.simulator.WatchPoint)/wp">wp</span><span class="symbol">:</span>&nbsp;<a href="../-watch-point/index.html"><span class="identifier">WatchPoint</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="at-breakpoint.html">atBreakpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">atBreakpoint</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="can-undo.html">canUndo</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">canUndo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="finish-plugins.html">finishPlugins</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">finishPlugins</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-cycles.html">getCycles</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCycles</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-f-reg.html">getFReg</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getFReg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getFReg(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../venusbackend.riscv.insts.floating/-decimal/index.html"><span class="identifier">Decimal</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-heap-end.html">getHeapEnd</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getHeapEnd</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-inst-at.html">getInstAt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getInstAt</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getInstAt(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-max-p-c.html">getMaxPC</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMaxPC</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-next-instruction.html">getNextInstruction</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getNextInstruction</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-p-c.html">getPC</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPC</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-reg.html">getReg</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getReg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getReg(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-triggured-watchpoints.html">getTrigguredWatchpoints</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTrigguredWatchpoints</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-set/index.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><a href="../-watch-point/index.html"><span class="identifier">WatchPoint</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="handle-watch-points.html">handleWatchPoints</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleWatchPoints</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$handleWatchPoints(kotlin.Boolean, kotlin.Number, kotlin.Number)/isStore">isStore</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$handleWatchPoints(kotlin.Boolean, kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$handleWatchPoints(kotlin.Boolean, kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-watchpoint.html">hasWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hasWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$hasWatchpoint(venusbackend.simulator.WatchPoint)/wp">wp</span><span class="symbol">:</span>&nbsp;<a href="../-watch-point/index.html"><span class="identifier">WatchPoint</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="inc-max-p-c.html">incMaxPC</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">incMaxPC</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$incMaxPC(kotlin.Number)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="increment-p-c.html">incrementPC</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">incrementPC</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$incrementPC(kotlin.Number)/inc">inc</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-done.html">isDone</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isDone</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-access.html">isValidAccess</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isValidAccess</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$isValidAccess(kotlin.Number, kotlin.Int)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$isValidAccess(kotlin.Number, kotlin.Int)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-byte.html">loadByte</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadByte</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadByte(kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$loadByte(kotlin.Number, kotlin.Boolean)/handleWatchpoint">handleWatchpoint</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-bytew-cache.html">loadBytewCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadBytewCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadBytewCache(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-half-word.html">loadHalfWord</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadHalfWord</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadHalfWord(kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$loadHalfWord(kotlin.Number, kotlin.Boolean)/handleWatchpoint">handleWatchpoint</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-half-wordw-cache.html">loadHalfWordwCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadHalfWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadHalfWordwCache(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-long.html">loadLong</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadLong</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadLong(kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$loadLong(kotlin.Number, kotlin.Boolean)/handleWatchpoint">handleWatchpoint</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-longw-cache.html">loadLongwCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadLongwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadLongwCache(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-word.html">loadWord</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadWord</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadWord(kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$loadWord(kotlin.Number, kotlin.Boolean)/handleWatchpoint">handleWatchpoint</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-wordw-cache.html">loadWordwCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadWordwCache(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="memcpy.html">memcpy</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">memcpy</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$memcpy(kotlin.Int, kotlin.Int, kotlin.Int)/destaddr">destaddr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$memcpy(kotlin.Int, kotlin.Int, kotlin.Int)/srcaddr">srcaddr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$memcpy(kotlin.Int, kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="memset.html">memset</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">memset</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$memset(kotlin.Int, kotlin.Int, kotlin.Int)/destaddr">destaddr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$memset(kotlin.Int, kotlin.Int, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$memset(kotlin.Int, kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="register-plugin.html">registerPlugin</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">registerPlugin</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$registerPlugin(kotlin.String, venusbackend.simulator.plugins.SimulatorPlugin)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$registerPlugin(kotlin.String, venusbackend.simulator.plugins.SimulatorPlugin)/plugin">plugin</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator.plugins/-simulator-plugin/index.html"><span class="identifier">SimulatorPlugin</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-all-args.html">removeAllArgs</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeAllArgs</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-all-args-from-mem.html">removeAllArgsFromMem</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeAllArgsFromMem</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-arg.html">removeArg</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeArg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$removeArg(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-plugin.html">removePlugin</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removePlugin</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$removePlugin(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-watchpoint.html">removeWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$removeWatchpoint(venusbackend.simulator.WatchPoint)/wp">wp</span><span class="symbol">:</span>&nbsp;<a href="../-watch-point/index.html"><span class="identifier">WatchPoint</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reset.html">reset</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$reset(kotlin.Boolean)/keep_args">keep_args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="run.html">run</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">run</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$run(kotlin.collections.List((venusbackend.simulator.plugins.SimulatorPlugin)), kotlin.Boolean)/plugins">plugins</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.simulator.plugins/-simulator-plugin/index.html"><span class="identifier">SimulatorPlugin</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$run(kotlin.collections.List((venusbackend.simulator.plugins.SimulatorPlugin)), kotlin.Boolean)/finishPluginsAfterRun">finishPluginsAfterRun</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="run-to-breakpoint.html">runToBreakpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">runToBreakpoint</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$runToBreakpoint(kotlin.collections.List((venusbackend.simulator.plugins.SimulatorPlugin)))/plugins">plugins</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.simulator.plugins/-simulator-plugin/index.html"><span class="identifier">SimulatorPlugin</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-cycles.html">setCycles</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCycles</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$setCycles(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-f-reg.html">setFReg</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setFReg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$setFReg(kotlin.Int, venusbackend.riscv.insts.floating.Decimal)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$setFReg(kotlin.Int, venusbackend.riscv.insts.floating.Decimal)/v">v</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.floating/-decimal/index.html"><span class="identifier">Decimal</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-f-reg-no-undo.html">setFRegNoUndo</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setFRegNoUndo</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$setFRegNoUndo(kotlin.Int, venusbackend.riscv.insts.floating.Decimal)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$setFRegNoUndo(kotlin.Int, venusbackend.riscv.insts.floating.Decimal)/v">v</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv.insts.floating/-decimal/index.html"><span class="identifier">Decimal</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-history-limit.html">setHistoryLimit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setHistoryLimit</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$setHistoryLimit(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-memory.html">setMemory</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setMemory</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$setMemory(venusbackend.simulator.Memory)/mem">mem</span><span class="symbol">:</span>&nbsp;<a href="../-memory/index.html"><span class="identifier">Memory</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-p-c.html">setPC</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setPC</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$setPC(kotlin.Number)/newPC">newPC</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-reg.html">setReg</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setReg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$setReg(kotlin.Int, kotlin.Number)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$setReg(kotlin.Int, kotlin.Number)/v">v</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-reg-no-undo.html">setRegNoUndo</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRegNoUndo</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$setRegNoUndo(kotlin.Int, kotlin.Number)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$setRegNoUndo(kotlin.Int, kotlin.Number)/v">v</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="step.html">step</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">step</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$step(kotlin.collections.List((venusbackend.simulator.plugins.SimulatorPlugin)))/plugins">plugins</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.simulator.plugins/-simulator-plugin/index.html"><span class="identifier">SimulatorPlugin</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-diff/index.html"><span class="identifier">Diff</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">step</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-diff/index.html"><span class="identifier">Diff</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-byte.html">storeByte</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeByte</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeByte(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeByte(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-bytew-cache.html">storeBytewCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeBytewCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeBytewCache(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeBytewCache(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-half-word.html">storeHalfWord</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeHalfWord</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWord(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWord(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-half-wordw-cache.html">storeHalfWordwCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeHalfWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWordwCache(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWordwCache(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-long.html">storeLong</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeLong</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeLong(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeLong(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-longw-cache.html">storeLongwCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeLongwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeLongwCache(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeLongwCache(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-text-override-check.html">storeTextOverrideCheck</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeTextOverrideCheck</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeTextOverrideCheck(kotlin.Number, kotlin.Number, venusbackend.riscv.MemSize)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeTextOverrideCheck(kotlin.Number, kotlin.Number, venusbackend.riscv.MemSize)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeTextOverrideCheck(kotlin.Number, kotlin.Number, venusbackend.riscv.MemSize)/size">size</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-mem-size/index.html"><span class="identifier">MemSize</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-word.html">storeWord</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeWord</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeWord(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeWord(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="store-wordw-cache.html">storeWordwCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">storeWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeWordwCache(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeWordwCache(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="toggle-breakpoint-at.html">toggleBreakpointAt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toggleBreakpointAt</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$toggleBreakpointAt(kotlin.Int)/idx">idx</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="trace.html">trace</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">trace</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-tracer/index.html"><span class="identifier">Tracer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="undo.html">undo</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">undo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-diff/index.html"><span class="identifier">Diff</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="will-heap-override-stack.html">willHeapOverrideStack</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">willHeapOverrideStack</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$willHeapOverrideStack(kotlin.Number)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

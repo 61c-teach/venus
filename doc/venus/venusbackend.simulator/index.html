@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>venusbackend.simulator - venus</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">venus</a>&nbsp;/&nbsp;<a href="./index.html">venusbackend.simulator</a><br/>
+<br/>
+<h2>Package venusbackend.simulator</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-diff/index.html">Diff</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Diff</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-file-descriptor/index.html">FileDescriptor</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FileDescriptor</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-file-meta-data/index.html">FileMetaData</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FileMetaData</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-files-handler/index.html">FilesHandler</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FilesHandler</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-history/index.html">History</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">History</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-memory/index.html">Memory</a></h4>
+</td>
+<td>
+<p>A class representing a computer's memory.</p>
+<code><span class="keyword">class </span><span class="identifier">Memory</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simulator/index.html">Simulator</a></h4>
+</td>
+<td>
+<p>Right now, this is a loose wrapper around SimulatorState
+Eventually, it will support debugging.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Simulator</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simulator-settings/index.html">SimulatorSettings</a></h4>
+</td>
+<td>
+<p>Created by thaum on 7/31/2018.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">SimulatorSettings</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simulator-state/index.html">SimulatorState</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">SimulatorState</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simulator-state128/index.html">SimulatorState128</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SimulatorState128</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-simulator-state/index.html"><span class="identifier">SimulatorState</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simulator-state16/index.html">SimulatorState16</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SimulatorState16</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-simulator-state/index.html"><span class="identifier">SimulatorState</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simulator-state32/index.html">SimulatorState32</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SimulatorState32</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-simulator-state/index.html"><span class="identifier">SimulatorState</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simulator-state64/index.html">SimulatorState64</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SimulatorState64</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-simulator-state/index.html"><span class="identifier">SimulatorState</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-trace/index.html">Trace</a></h4>
+</td>
+<td>
+<p>Created by Thaumic on 7/14/2018.</p>
+<code><span class="keyword">class </span><span class="identifier">Trace</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-trace-encapsulation/index.html">TraceEncapsulation</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TraceEncapsulation</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-tracer/index.html">Tracer</a></h4>
+</td>
+<td>
+<p>Created by Thaumic on 7/14/2018.</p>
+<code><span class="keyword">class </span><span class="identifier">Tracer</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-watch-point/index.html">WatchPoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WatchPoint</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-alignment-error/index.html">AlignmentError</a></h4>
+</td>
+<td>
+<p>Thrown when errors occur when memory is not aligned.</p>
+<code><span class="keyword">class </span><span class="identifier">AlignmentError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-simulator-error/index.html"><span class="identifier">SimulatorError</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-exceeded-allowed-cycles-error/index.html">ExceededAllowedCyclesError</a></h4>
+</td>
+<td>
+<p>Thrown when errors occur during simulation.</p>
+<code><span class="keyword">class </span><span class="identifier">ExceededAllowedCyclesError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-simulator-error/index.html"><span class="identifier">SimulatorError</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simulator-error/index.html">SimulatorError</a></h4>
+</td>
+<td>
+<p>Thrown when errors occur during simulation.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SimulatorError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-store-error/index.html">StoreError</a></h4>
+</td>
+<td>
+<p>Thrown when errors occur when memory is not aligned.</p>
+<code><span class="keyword">class </span><span class="identifier">StoreError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-simulator-error/index.html"><span class="identifier">SimulatorError</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="decimal-to-hex-string.html">decimalToHexString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">decimalToHexString</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator$decimalToHexString(kotlin.Int)/number">number</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-base-log.html">getBaseLog</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBaseLog</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator$getBaseLog(kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator$getBaseLog(kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="num-to-base.html">numToBase</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">numToBase</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator$numToBase(kotlin.Int, kotlin.Number, kotlin.Int, kotlin.Boolean)/curNumBase">curNumBase</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator$numToBase(kotlin.Int, kotlin.Number, kotlin.Int, kotlin.Boolean)/nu">nu</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator$numToBase(kotlin.Int, kotlin.Number, kotlin.Int, kotlin.Boolean)/lengthNeeded">lengthNeeded</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator$numToBase(kotlin.Int, kotlin.Number, kotlin.Int, kotlin.Boolean)/signextend">signextend</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

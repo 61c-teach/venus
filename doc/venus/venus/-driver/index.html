@@ -1,0 +1,837 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Driver - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venus</a>&nbsp;/&nbsp;<a href="./index.html">Driver</a><br/>
+<br/>
+<h1>Driver</h1>
+<code><span class="keyword">object </span><span class="identifier">Driver</span></code>
+<p>The "driver" singleton which can be called from Javascript for all functionality.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="active_abs_file_name.html">active_abs_file_name</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">active_abs_file_name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="active_abs_file_path.html">active_abs_file_path</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">active_abs_file_path</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="active-filein-editor.html">activeFileinEditor</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">activeFileinEditor</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="cache.html">cache</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cache</span><span class="symbol">: </span><a href="../../venusbackend.simulator.cache/-cache-handler/index.html"><span class="identifier">CacheHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="cache-levels.html">cacheLevels</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cacheLevels</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.simulator.cache/-cache-handler/index.html"><span class="identifier">CacheHandler</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="debug.html">debug</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">debug</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="do-calling-convention-check.html">doCallingConventionCheck</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">doCallingConventionCheck</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="driver_complete_loading.html">driver_complete_loading</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">driver_complete_loading</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="file-explorer-current-location.html">fileExplorerCurrentLocation</a></h4>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">fileExplorerCurrentLocation</span><span class="symbol">: </span><a href="../../venus.vfs/-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="file-explorer-previous-location.html">fileExplorerPreviousLocation</a></h4>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">fileExplorerPreviousLocation</span><span class="symbol">: </span><a href="../../venus.vfs/-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-f-reginput-as-float.html">FReginputAsFloat</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">FReginputAsFloat</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-l-s.html">LS</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">LS</span><span class="symbol">: </span><a href="../-local-storage/index.html"><span class="identifier">LocalStorage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="main-cache.html">mainCache</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">mainCache</span><span class="symbol">: </span><a href="../../venusbackend.simulator.cache/-cache-handler/index.html"><span class="identifier">CacheHandler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="p.html">p</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">p</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-script-manager.html">ScriptManager</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ScriptManager</span><span class="symbol">: </span><a href="../../venus.api/-script-manager/index.html"><span class="identifier">ScriptManager</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sim.html">sim</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sim</span><span class="symbol">: </span><a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sim-settings.html">simSettings</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">simSettings</span><span class="symbol">: </span><a href="../../venusbackend.simulator/-simulator-settings/index.html"><span class="identifier">SimulatorSettings</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="terminal.html">terminal</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">terminal</span><span class="symbol">: </span><a href="../../venus.terminal/-terminal/index.html"><span class="identifier">Terminal</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tr.html">tr</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">tr</span><span class="symbol">: </span><a href="../../venusbackend.simulator/-tracer/index.html"><span class="identifier">Tracer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tr-timer.html">trTimer</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">trTimer</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="use-l-s.html">useLS</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">useLS</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-v-f-s.html">VFS</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">VFS</span><span class="symbol">: </span><a href="../../venus.vfs/-virtual-file-system/index.html"><span class="identifier">VirtualFileSystem</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="watchpoints.html">watchpoints</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">watchpoints</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-set/index.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.simulator/-watch-point/index.html"><span class="identifier">WatchPoint</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-breakpoint.html">addBreakpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addBreakpoint</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$addBreakpoint(kotlin.Int)/idx">idx</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-package.html">addPackage</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addPackage</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$addPackage(org.w3c.dom.HTMLButtonElement)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-button-element/index.html"><span class="identifier">HTMLButtonElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-raw-watchpoint.html">addRawWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addRawWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$addRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/onRead">onRead</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="venus.Driver$addRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/onWrite">onWrite</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="venus.Driver$addRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="venus.Driver$addRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="venus.Driver$addRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/mask">mask</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="add-watchpoint.html">addWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$addWatchpoint(org.w3c.dom.HTMLDivElement)/elm">elm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-div-element/index.html"><span class="identifier">HTMLDivElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="assemble-simulator.html">assembleSimulator</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">assembleSimulator</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="blink-save.html">blinkSave</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">blinkSave</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$blinkSave(kotlin.Boolean)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="check-u-r-l-params.html">checkURLParams</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkURLParams</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="clear-active-file-in-editor.html">clearActiveFileInEditor</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearActiveFileInEditor</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="clear-u-r-l-params.html">clearURLParams</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearURLParams</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="currently-running.html">currentlyRunning</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">currentlyRunning</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="delete-v-f-object.html">deleteVFObject</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deleteVFObject</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$deleteVFObject(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="destrictive-get-sim-out.html">destrictiveGetSimOut</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">destrictiveGetSimOut</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="dump.html">dump</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dump</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="edit-v-f-object.html">editVFObject</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">editVFObject</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$editVFObject(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="edit-v-f-objectfrom-obj.html">editVFObjectfromObj</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">editVFObjectfromObj</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$editVFObjectfromObj(venus.vfs.VFSObject)/obj">obj</span><span class="symbol">:</span>&nbsp;<a href="../../venus.vfs/-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="edit-watchpoint.html">editWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">editWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$editWatchpoint(kotlin.String, org.w3c.dom.HTMLDivElement)/which">which</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.Driver$editWatchpoint(kotlin.String, org.w3c.dom.HTMLDivElement)/elm">elm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-div-element/index.html"><span class="identifier">HTMLDivElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enable-calling-convention.html">enableCallingConvention</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">enableCallingConvention</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$enableCallingConvention(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exitcodecheck.html">exitcodecheck</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">exitcodecheck</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="external-assemble.html">externalAssemble</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">externalAssemble</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$externalAssemble(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.Driver$externalAssemble(kotlin.String, kotlin.String)/absPath">absPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-default-args.html">getDefaultArgs</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDefaultArgs</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-instruction-dump.html">getInstructionDump</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getInstructionDump</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-max-steps.html">getMaxSteps</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMaxSteps</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init-finish.html">initFinish</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">initFinish</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init-timeout.html">initTimeout</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">initTimeout</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="internal-add-watchpoint.html">internalAddWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">internalAddWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$internalAddWatchpoint(kotlin.String, org.w3c.dom.HTMLDivElement)/which">which</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venus.Driver$internalAddWatchpoint(kotlin.String, org.w3c.dom.HTMLDivElement)/elm">elm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-div-element/index.html"><span class="identifier">HTMLDivElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="lint.html">lint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lint</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$lint(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="../../venusbackend.assembler/-lint-error/index.html"><span class="identifier">LintError</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-all.html">loadAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadAll</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$loadAll(kotlin.Boolean)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-sim.html">loadSim</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadSim</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$loadSim(venusbackend.linker.LinkedProgram)/linked">linked</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.linker/-linked-program/index.html"><span class="identifier">LinkedProgram</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="move-memory-down.html">moveMemoryDown</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">moveMemoryDown</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="move-memory-jump.html">moveMemoryJump</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">moveMemoryJump</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="move-memory-location.html">moveMemoryLocation</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">moveMemoryLocation</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$moveMemoryLocation(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="move-memory-up.html">moveMemoryUp</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">moveMemoryUp</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="no-assemble.html">noAssemble</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">noAssemble</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-editor.html">openEditor</a></h4>
+</td>
+<td>
+<p>Opens and renders the editor.</p>
+<code><span class="keyword">fun </span><span class="identifier">openEditor</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-generic-main-tab.html">openGenericMainTab</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openGenericMainTab</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openGenericMainTab(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-settings-tab.html">openSettingsTab</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openSettingsTab</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openSettingsTab(kotlin.String)/tabid">tabid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-simulator.html">openSimulator</a></h4>
+</td>
+<td>
+<p>Run when the user clicks the "Simulator" tab.</p>
+<code><span class="keyword">fun </span><span class="identifier">openSimulator</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-simulator-reigster-tab.html">openSimulatorReigsterTab</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openSimulatorReigsterTab</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openSimulatorReigsterTab(kotlin.String)/tabid">tabid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-simulator-tab.html">openSimulatorTab</a></h4>
+</td>
+<td>
+<p>Change to register tab.</p>
+<code><span class="keyword">fun </span><span class="identifier">openSimulatorTab</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openSimulatorTab(kotlin.String)/tabid">tabid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-simulator-v-d-b-tab.html">openSimulatorVDBTab</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openSimulatorVDBTab</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openSimulatorVDBTab(kotlin.String)/tabid">tabid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-u-r-l-maker.html">openURLMaker</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openURLMaker</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-venus.html">openVenus</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openVenus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-venus-sub-settings-tab.html">openVenusSubSettingsTab</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openVenusSubSettingsTab</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openVenusSubSettingsTab(kotlin.String)/tabid">tabid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-venus-tab.html">openVenusTab</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openVenusTab</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openVenusTab(kotlin.String)/tabid">tabid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-v-f-object.html">openVFObject</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openVFObject</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openVFObject(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-v-f-objectfrom-obj.html">openVFObjectfromObj</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openVFObjectfromObj</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$openVFObjectfromObj(venus.vfs.VFSObject)/obj">obj</span><span class="symbol">:</span>&nbsp;<a href="../../venus.vfs/-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="package-loaded.html">packageLoaded</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">packageLoaded</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$packageLoaded(org.w3c.dom.HTMLButtonElement)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-button-element/index.html"><span class="identifier">HTMLButtonElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="parse-string.html">parseString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">parseString</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$parseString(kotlin.String)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="persistent-storage.html">persistentStorage</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">persistentStorage</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$persistentStorage(kotlin.Boolean)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ps-reset.html">psReset</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">psReset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="refresh-v-f-s.html">refreshVFS</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">refreshVFS</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-package.html">removePackage</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removePackage</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$removePackage(kotlin.String)/packageID">packageID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-raw-watchpoint.html">removeRawWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeRawWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$removeRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/onRead">onRead</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="venus.Driver$removeRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/onWrite">onWrite</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="venus.Driver$removeRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="venus.Driver$removeRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="venus.Driver$removeRawWatchpoint(kotlin.Boolean, kotlin.Boolean, kotlin.Number, kotlin.Number, kotlin.Number)/mask">mask</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-watchpoint.html">removeWatchpoint</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeWatchpoint</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$removeWatchpoint(org.w3c.dom.HTMLDivElement)/elm">elm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-div-element/index.html"><span class="identifier">HTMLDivElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reset.html">reset</a></h4>
+</td>
+<td>
+<p>Resets the simulator to its initial state</p>
+<code><span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="run.html">run</a></h4>
+</td>
+<td>
+<p>Runs the simulator until it is done, or until the run button is pressed again.</p>
+<code><span class="keyword">fun </span><span class="identifier">run</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="run-end.html">runEnd</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">runEnd</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="save-all.html">saveAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">saveAll</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$saveAll(kotlin.Boolean)/override">override</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="save-editor-if-modified.html">saveEditorIfModified</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">saveEditorIfModified</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="save-f-register.html">saveFRegister</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">saveFRegister</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$saveFRegister(org.w3c.dom.HTMLInputElement, kotlin.Int)/freg">freg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-input-element/index.html"><span class="identifier">HTMLInputElement</span></a><span class="symbol">, </span><span class="identifier" id="venus.Driver$saveFRegister(org.w3c.dom.HTMLInputElement, kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="save-interval-fn.html">saveIntervalFn</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">saveIntervalFn</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="save-register.html">saveRegister</a></h4>
+</td>
+<td>
+<p>Save a register's value</p>
+<code><span class="keyword">fun </span><span class="identifier">saveRegister</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$saveRegister(org.w3c.dom.HTMLInputElement, kotlin.Int)/reg">reg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-input-element/index.html"><span class="identifier">HTMLInputElement</span></a><span class="symbol">, </span><span class="identifier" id="venus.Driver$saveRegister(org.w3c.dom.HTMLInputElement, kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="save-v-f-object.html">saveVFObject</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">saveVFObject</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$saveVFObject(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="save-v-f-objectfrom-obj.html">saveVFObjectfromObj</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">saveVFObjectfromObj</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$saveVFObjectfromObj(venus.vfs.VFSObject, kotlin.Boolean)/obj">obj</span><span class="symbol">:</span>&nbsp;<a href="../../venus.vfs/-v-f-s-object/index.html"><span class="identifier">VFSObject</span></a><span class="symbol">, </span><span class="identifier" id="venus.Driver$saveVFObjectfromObj(venus.vfs.VFSObject, kotlin.Boolean)/save">save</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set_active_afpath.html">set_active_afpath</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">set_active_afpath</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$set_active_afpath(kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-aligned-addressing.html">setAlignedAddressing</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setAlignedAddressing</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setAlignedAddressing(kotlin.Boolean)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-allow-access-btn-stack-heap.html">setAllowAccessBtnStackHeap</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setAllowAccessBtnStackHeap</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setAllowAccessBtnStackHeap(kotlin.Boolean)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-cache-enabled.html">setCacheEnabled</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCacheEnabled</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setCacheEnabled(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-cache-seed.html">setCacheSeed</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCacheSeed</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setCacheSeed(kotlin.String)/v">v</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-cache-settings.html">setCacheSettings</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCacheSettings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-max-history.html">setMaxHistory</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setMaxHistory</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setMaxHistory(org.w3c.dom.HTMLInputElement)/input">input</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-input-element/index.html"><span class="identifier">HTMLInputElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-mutable-text.html">setMutableText</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setMutableText</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setMutableText(kotlin.Boolean)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-number-of-cache-levels.html">setNumberOfCacheLevels</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setNumberOfCacheLevels</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setNumberOfCacheLevels(kotlin.Int)/i">i</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-only-ecall-exit.html">setOnlyEcallExit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setOnlyEcallExit</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setOnlyEcallExit(kotlin.Boolean)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-set-regs-on-init.html">setSetRegsOnInit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setSetRegsOnInit</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$setSetRegsOnInit(kotlin.Boolean)/b">b</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="step.html">step</a></h4>
+</td>
+<td>
+<p>Runs the simulator for one step and renders any updates.</p>
+<code><span class="keyword">fun </span><span class="identifier">step</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="toggle-package.html">togglePackage</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">togglePackage</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$togglePackage(kotlin.String)/packageID">packageID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="trace.html">trace</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">trace</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="undo.html">undo</a></h4>
+</td>
+<td>
+<p>Undo the last executed instruction and render any updates.</p>
+<code><span class="keyword">fun </span><span class="identifier">undo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="unparse-string.html">unparseString</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">unparseString</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$unparseString(kotlin.String)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-cache-associativity.html">updateCacheAssociativity</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateCacheAssociativity</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$updateCacheAssociativity(org.w3c.dom.HTMLInputElement)/e">e</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-input-element/index.html"><span class="identifier">HTMLInputElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-cache-block-size.html">updateCacheBlockSize</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateCacheBlockSize</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$updateCacheBlockSize(org.w3c.dom.HTMLInputElement)/e">e</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-input-element/index.html"><span class="identifier">HTMLInputElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-cache-level.html">updateCacheLevel</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateCacheLevel</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$updateCacheLevel(org.w3c.dom.HTMLSelectElement)/e">e</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-select-element/index.html"><span class="identifier">HTMLSelectElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-cache-lvl.html">updateCacheLvl</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateCacheLvl</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$updateCacheLvl(kotlin.Int)/level">level</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-cache-number-of-blocks.html">updateCacheNumberOfBlocks</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateCacheNumberOfBlocks</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$updateCacheNumberOfBlocks(org.w3c.dom.HTMLInputElement)/e">e</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-input-element/index.html"><span class="identifier">HTMLInputElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-cache-placement-policy.html">updateCachePlacementPolicy</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateCachePlacementPolicy</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$updateCachePlacementPolicy(org.w3c.dom.HTMLSelectElement)/e">e</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-select-element/index.html"><span class="identifier">HTMLSelectElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-cache-replacement-policy.html">updateCacheReplacementPolicy</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateCacheReplacementPolicy</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$updateCacheReplacementPolicy(org.w3c.dom.HTMLSelectElement)/e">e</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-select-element/index.html"><span class="identifier">HTMLSelectElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-max-steps.html">updateMaxSteps</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateMaxSteps</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-memory-location.html">updateMemoryLocation</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateMemoryLocation</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$updateMemoryLocation(org.w3c.dom.HTMLSelectElement, kotlin.Int)/e">e</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-select-element/index.html"><span class="identifier">HTMLSelectElement</span></a><span class="symbol">, </span><span class="identifier" id="venus.Driver$updateMemoryLocation(org.w3c.dom.HTMLSelectElement, kotlin.Int)/byteOffset">byteOffset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-reg-mem-display.html">updateRegMemDisplay</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateRegMemDisplay</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="vdb-v-f-object.html">vdbVFObject</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">vdbVFObject</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$vdbVFObject(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="verify-text.html">verifyText</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">verifyText</span><span class="symbol">(</span><span class="identifier" id="venus.Driver$verifyText(org.w3c.dom.HTMLInputElement)/input">input</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-input-element/index.html"><span class="identifier">HTMLInputElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

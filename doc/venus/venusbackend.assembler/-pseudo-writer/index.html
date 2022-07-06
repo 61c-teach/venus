@@ -1,0 +1,368 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PseudoWriter - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.assembler</a>&nbsp;/&nbsp;<a href="./index.html">PseudoWriter</a><br/>
+<br/>
+<h1>PseudoWriter</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PseudoWriter</span></code>
+<p>Converts a pseudoinstruction into TAL instructions.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Converts a pseudoinstruction into TAL instructions.</p>
+<code><span class="identifier">PseudoWriter</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-e-q-z.html">BEQZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>beqz rs, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BEQZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-g-e-z.html">BGEZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>bgez rs, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BGEZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-g-t.html">BGT</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>bgt rs, rt, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BGT</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-g-t-u.html">BGTU</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>bgtu rs, rt, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BGTU</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-g-t-z.html">BGTZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>bgtz rs, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BGTZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-l-e.html">BLE</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>ble rs, rt, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BLE</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-l-e-u.html">BLEU</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>bleu rs, rt, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BLEU</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-l-e-z.html">BLEZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>blez rs, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BLEZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-l-t-z.html">BLTZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>bltz rs, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BLTZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-b-n-e-z.html">BNEZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>bnez rs, label</code></p>
+<code><span class="keyword">object </span><span class="identifier">BNEZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-c-a-l-l.html">CALL</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>call label</code>.</p>
+<code><span class="keyword">object </span><span class="identifier">CALL</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-f-a-b-s-d.html">FABSD</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>fabs.d rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">FABSD</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-f-a-b-s-s.html">FABSS</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>fabs.s rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">FABSS</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-f-m-v-d.html">FMVD</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>fmv.d rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">FMVD</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-f-m-v-s.html">FMVS</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>fmv.s rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">FMVS</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-f-n-e-g-d.html">FNEGD</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>fneg.d rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">FNEGD</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-f-n-e-g-s.html">FNEGS</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>fmv.s rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">FNEGS</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-j.html">J</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>j label</code></p>
+<code><span class="keyword">object </span><span class="identifier">J</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-j-a-l.html">JAL</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>venusbackend.venusbackend.riscv.insts.integer.base.getJal label</code></p>
+<code><span class="keyword">object </span><span class="identifier">JAL</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-j-a-l-r.html">JALR</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>jalr reg</code></p>
+<code><span class="keyword">object </span><span class="identifier">JALR</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-j-r.html">JR</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>jr register</code></p>
+<code><span class="keyword">object </span><span class="identifier">JR</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-l-a.html">LA</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>la reg, label</code>.</p>
+<code><span class="keyword">object </span><span class="identifier">LA</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-l-i.html">LI</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>li rd, imm</code>.</p>
+<code><span class="keyword">object </span><span class="identifier">LI</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-load.html">Load</a></h4>
+</td>
+<td>
+<p>Writes a load pseudoinstruction. (Those applied to a label)</p>
+<code><span class="keyword">object </span><span class="identifier">Load</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-m-v.html">MV</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>mv rd, rs1</code></p>
+<code><span class="keyword">object </span><span class="identifier">MV</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-n-e-g.html">NEG</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>neg rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">NEG</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-n-e-g-w.html">NEGW</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>negw rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">NEGW</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-n-o-p.html">NOP</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>nop</code></p>
+<code><span class="keyword">object </span><span class="identifier">NOP</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-n-o-t.html">NOT</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>not rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">NOT</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-r-e-t.html">RET</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>ret</code></p>
+<code><span class="keyword">object </span><span class="identifier">RET</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-e-q.html">SEQ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>seq</code> (set equal to)</p>
+<code><span class="keyword">object </span><span class="identifier">SEQ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-e-q-z.html">SEQZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>seqz rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">SEQZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-e-x-t-w.html">SEXTW</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>sext.w rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">SEXTW</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-g-e.html">SGE</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>sge</code> (set greater than or equal to)</p>
+<code><span class="keyword">object </span><span class="identifier">SGE</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-g-t.html">SGT</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>sgt</code> (set greater than)</p>
+<code><span class="keyword">object </span><span class="identifier">SGT</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-g-t-z.html">SGTZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>sgtz rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">SGTZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-l-e.html">SLE</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>sle</code> (set less than or equal to)</p>
+<code><span class="keyword">object </span><span class="identifier">SLE</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-l-t-z.html">SLTZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>sltz rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">SLTZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-n-e.html">SNE</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>sne</code> (set not equal to)</p>
+<code><span class="keyword">object </span><span class="identifier">SNE</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-s-n-e-z.html">SNEZ</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>snez rd, rs</code></p>
+<code><span class="keyword">object </span><span class="identifier">SNEZ</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-store.html">Store</a></h4>
+</td>
+<td>
+<p>Writes a store pseudoinstruction. (Those applied to a label)</p>
+<code><span class="keyword">object </span><span class="identifier">Store</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.assembler.pseudos/-t-a-i-l.html">TAIL</a></h4>
+</td>
+<td>
+<p>Writes pseudoinstruction <code>tail label</code>.</p>
+<code><span class="keyword">object </span><span class="identifier">TAIL</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PseudoWriter</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

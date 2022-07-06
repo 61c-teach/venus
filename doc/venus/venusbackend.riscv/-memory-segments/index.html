@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MemorySegments - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.riscv</a>&nbsp;/&nbsp;<a href="./index.html">MemorySegments</a><br/>
+<br/>
+<h1>MemorySegments</h1>
+<code><span class="keyword">object </span><span class="identifier">MemorySegments</span></code>
+<p>A singleton containing constants which say where various segments start</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-h-e-a-p_-b-e-g-i-n.html">HEAP_BEGIN</a></h4>
+</td>
+<td>
+<p>Memory address where the heap segment starts</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">HEAP_BEGIN</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-t-a-c-k_-b-e-g-i-n.html">STACK_BEGIN</a></h4>
+</td>
+<td>
+<p>Memory address where the stack segment starts (growing downwards)</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">STACK_BEGIN</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-t-a-t-i-c_-b-e-g-i-n.html">STATIC_BEGIN</a></h4>
+</td>
+<td>
+<p>Memory address where the data segment starts</p>
+<code><span class="keyword">var </span><span class="identifier">STATIC_BEGIN</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-e-x-t_-b-e-g-i-n.html">TEXT_BEGIN</a></h4>
+</td>
+<td>
+<p>Memory address where the text segment starts</p>
+<code><span class="keyword">var </span><span class="identifier">TEXT_BEGIN</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="set-text-begin.html">setTextBegin</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setTextBegin</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.MemorySegments$setTextBegin(kotlin.Int)/i">i</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

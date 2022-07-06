@@ -1,0 +1,163 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>InstructionDisassembler - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.riscv.insts.dsl.disasms</a>&nbsp;/&nbsp;<a href="./index.html">InstructionDisassembler</a><br/>
+<br/>
+<h1>InstructionDisassembler</h1>
+<code><span class="keyword">interface </span><span class="identifier">InstructionDisassembler</span></code>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="invoke.html">invoke</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">invoke</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.dsl.disasms.InstructionDisassembler$invoke(venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.atomic/-a-m-o-r-type-disassembler/index.html">AMORTypeDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">AMORTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.base/-b-type-disassembler/index.html">BTypeDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">BTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.compressed/-c-a-type-disassembler/index.html">CATypeDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">CATypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.compressed/-c-r-type-disassembler/index.html">CRTypeDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">CRTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.floating/-f-f-r-r-type-disassembler/index.html">FFRRTypeDisassembler</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">object </span><span class="identifier">FFRRTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.floating/-f-i-type-disassembler/index.html">FITypeDisassembler</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">object </span><span class="identifier">FITypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.floating/-f-r4-type-disassembler/index.html">FR4TypeDisassembler</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">object </span><span class="identifier">FR4TypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.floating/-f-r-r-type-disassembler/index.html">FRRTypeDisassembler</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">object </span><span class="identifier">FRRTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.floating/-f-r-type-disassembler/index.html">FRTypeDisassembler</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">object </span><span class="identifier">FRTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.floating/-f-s-type-disassembler/index.html">FSTypeDisassembler</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">object </span><span class="identifier">FSTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.base/-i-type-disassembler/index.html">ITypeDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">ITypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.base/-load-disassembler/index.html">LoadDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">LoadDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-raw-disassembler/index.html">RawDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RawDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.extensions.floating/-r-f-r-type-disassembler/index.html">RFRTypeDisassembler</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">object </span><span class="identifier">RFRTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.base/-r-type-disassembler/index.html">RTypeDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">RTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.base/-shift-immediate-disassembler/index.html">ShiftImmediateDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">ShiftImmediateDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.base/-s-type-disassembler/index.html">STypeDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">STypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.disasms.base/-u-type-disassembler/index.html">UTypeDisassembler</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">UTypeDisassembler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionDisassembler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>venusbackend.riscv.insts.integer.base.i.ecall - venus</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">venus</a>&nbsp;/&nbsp;<a href="./index.html">venusbackend.riscv.insts.integer.base.i.ecall</a><br/>
+<br/>
+<h2>Package venusbackend.riscv.insts.integer.base.i.ecall</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-alloc/index.html">Alloc</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Alloc</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-malloc-node/index.html">MallocNode</a></h4>
+</td>
+<td>
+<p>This is a wrapper file for all basic malloc operations.
+Malloc Node has the format:
+char*<a href="#">0</a> where this is of size size.
+uppermagic
+prevNode
+nextNode
+free
+size
+lowermagic
+nodeAddr^</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MallocNode</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-syscall/index.html">Syscall</a></h4>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Syscall</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="ecall.html">ecall</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ecall</span><span class="symbol">: </span><a href="../venusbackend.riscv.insts.dsl.types/-instruction/index.html"><span class="identifier">Instruction</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="calloc.html">calloc</a></h4>
+</td>
+<td>
+<p>Takes in:
+a1 nitems
+a2 size</p>
+<code><span class="keyword">fun </span><span class="identifier">calloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall$calloc(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="clib.html">clib</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clib</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall$clib(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="free.html">free</a></h4>
+</td>
+<td>
+<p>Takes in:
+a1 ptr</p>
+<code><span class="keyword">fun </span><span class="identifier">free</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall$free(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="malloc.html">malloc</a></h4>
+</td>
+<td>
+<p>Takes in
+a1 size to malloc.</p>
+<code><span class="keyword">fun </span><span class="identifier">malloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall$malloc(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="malloc-active-num-blocks.html">mallocActiveNumBlocks</a></h4>
+</td>
+<td>
+<p>Takes in nothing</p>
+<code><span class="keyword">fun </span><span class="identifier">mallocActiveNumBlocks</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall$mallocActiveNumBlocks(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="realloc.html">realloc</a></h4>
+</td>
+<td>
+<p>Takes in:
+a1 ptr
+a2 size</p>
+<code><span class="keyword">fun </span><span class="identifier">realloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall$realloc(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

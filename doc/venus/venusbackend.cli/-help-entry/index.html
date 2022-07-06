@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HelpEntry - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.cli</a>&nbsp;/&nbsp;<a href="./index.html">HelpEntry</a><br/>
+<br/>
+<h1>HelpEntry</h1>
+<code><span class="keyword">interface </span><span class="identifier">HelpEntry</span></code>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="print-help.html">printHelp</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">printHelp</span><span class="symbol">(</span><span class="identifier" id="venusbackend.cli.HelpEntry$printHelp(venusbackend.cli.HelpPrinter)/helpPrinter">helpPrinter</span><span class="symbol">:</span>&nbsp;<a href="../-help-printer/index.html"><span class="identifier">HelpPrinter</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-flag-action-base/index.html">FlagActionBase</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">FlagActionBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-flag-action/index.html"><span class="identifier">FlagAction</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">HelpEntry</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-flag-value-action-base/index.html">FlagValueActionBase</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">FlagValueActionBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-argument-action/index.html"><span class="identifier">ArgumentAction</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">HelpEntry</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-help-entries-group/index.html">HelpEntriesGroup</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HelpEntriesGroup</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-command-line-builder/index.html"><span class="identifier">CommandLineBuilder</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">HelpEntry</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-positional-action-base/index.html">PositionalActionBase</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PositionalActionBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-positional-argument/index.html"><span class="identifier">PositionalArgument</span></a><span class="symbol">, </span><a href="../-argument-action/index.html"><span class="identifier">ArgumentAction</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">HelpEntry</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

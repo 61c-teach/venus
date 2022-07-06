@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Set - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator.cache</a>&nbsp;/&nbsp;<a href="./index.html">Set</a><br/>
+<br/>
+<h1>Set</h1>
+<code><span class="keyword">class </span><span class="identifier">Set</span></code>
+<p>Created by thaum on 7/29/2018.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Created by thaum on 7/29/2018.</p>
+<code><span class="identifier">Set</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Set$<init>(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.CacheHandler)/associativity">associativity</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Set$<init>(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.CacheHandler)/blocksize">blocksize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Set$<init>(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.CacheHandler)/cacheHandler">cacheHandler</span><span class="symbol">:</span>&nbsp;<a href="../-cache-handler/index.html"><span class="identifier">CacheHandler</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="cache-handler.html">cacheHandler</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">cacheHandler</span><span class="symbol">: </span><a href="../-cache-handler/index.html"><span class="identifier">CacheHandler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="block-states.html">blockStates</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">blockStates</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Set$blockStates(kotlin.collections.ArrayList((kotlin.String)))/a">a</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="copy.html">copy</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Set</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-block.html">findBlock</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">findBlock</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Set$findBlock(kotlin.Int)/tag">tag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-block/index.html"><span class="identifier">Block</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-l-r-u.html">getLRU</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getLRU</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-block/index.html"><span class="identifier">Block</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-random.html">getRandom</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRandom</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-block/index.html"><span class="identifier">Block</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-random-int.html">getRandomInt</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRandomInt</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Set$getRandomInt(kotlin.Int, kotlin.Int)/min">min</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Set$getRandomInt(kotlin.Int, kotlin.Int)/vmax">vmax</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read.html">read</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Set$read(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.BlockState)/tag">tag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Set$read(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.BlockState)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Set$read(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.BlockState)/bs">bs</span><span class="symbol">:</span>&nbsp;<a href="../-block-state/index.html"><span class="identifier">BlockState</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write.html">write</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Set$write(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.BlockState)/tag">tag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Set$write(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.BlockState)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Set$write(kotlin.Int, kotlin.Int, venusbackend.simulator.cache.BlockState)/bs">bs</span><span class="symbol">:</span>&nbsp;<a href="../-block-state/index.html"><span class="identifier">BlockState</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

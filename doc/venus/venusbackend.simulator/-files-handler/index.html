@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FilesHandler - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator</a>&nbsp;/&nbsp;<a href="./index.html">FilesHandler</a><br/>
+<br/>
+<h1>FilesHandler</h1>
+<code><span class="keyword">class </span><span class="identifier">FilesHandler</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">FilesHandler</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$<init>(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="fd-counter.html">fdCounter</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">fdCounter</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="files.html">files</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">files</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="../-file-descriptor/index.html"><span class="identifier">FileDescriptor</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="close-file-descriptor.html">closeFileDescriptor</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">closeFileDescriptor</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$closeFileDescriptor(kotlin.Int)/fdID">fdID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="flush-file-descriptor.html">flushFileDescriptor</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">flushFileDescriptor</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$flushFileDescriptor(kotlin.Int)/fdID">fdID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-file-descriptor.html">getFileDescriptor</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getFileDescriptor</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$getFileDescriptor(kotlin.Int)/fdID">fdID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-file-descriptor/index.html"><span class="identifier">FileDescriptor</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-file-descriptor-e-o-f.html">getFileDescriptorEOF</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getFileDescriptorEOF</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$getFileDescriptorEOF(kotlin.Int)/fdID">fdID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-file-descriptor-error.html">getFileDescriptorError</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getFileDescriptorError</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$getFileDescriptorError(kotlin.Int)/fdID">fdID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open-file.html">openFile</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openFile</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$openFile(venusbackend.simulator.Simulator, kotlin.String, kotlin.Int)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.FilesHandler$openFile(venusbackend.simulator.Simulator, kotlin.String, kotlin.Int)/filename">filename</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.FilesHandler$openFile(venusbackend.simulator.Simulator, kotlin.String, kotlin.Int)/permissions">permissions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read-file-descriptor.html">readFileDescriptor</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">readFileDescriptor</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$readFileDescriptor(kotlin.Int, kotlin.Int)/fdID">fdID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.FilesHandler$readFileDescriptor(kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write-file-descriptor.html">writeFileDescriptor</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">writeFileDescriptor</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.FilesHandler$writeFileDescriptor(kotlin.Int, kotlin.String)/fdID">fdID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.FilesHandler$writeFileDescriptor(kotlin.Int, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-e-o-f.html">EOF</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">EOF</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

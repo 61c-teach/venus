@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Cache - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator.cache</a>&nbsp;/&nbsp;<a href="./index.html">Cache</a><br/>
+<br/>
+<h1>Cache</h1>
+<code><span class="keyword">class </span><span class="identifier">Cache</span></code>
+<h3>Parameters</h3>
+<p><a name="capacity"></a>
+<code>capacity</code> - the size in words of the cHandler</p>
+<p><a name="associativity"></a>
+<code>associativity</code> - the number of blocks in each set</p>
+<p><a name="blocksize"></a>
+<code>blocksize</code> - the size in bytes of each block</p>
+<p><a name="memory"></a>
+<code>memory</code> - a reference to main memory</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">Cache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Cache$<init>(venusbackend.simulator.cache.CacheHandler)/c">c</span><span class="symbol">:</span>&nbsp;<a href="../-cache-handler/index.html"><span class="identifier">CacheHandler</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="block-states.html">blockStates</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">blockStates</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="copy.html">copy</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Cache</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="read.html">read</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Cache$read(venusbackend.riscv.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write.html">write</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Cache$write(venusbackend.riscv.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

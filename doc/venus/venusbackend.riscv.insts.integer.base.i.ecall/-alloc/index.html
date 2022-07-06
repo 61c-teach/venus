@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Alloc - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.riscv.insts.integer.base.i.ecall</a>&nbsp;/&nbsp;<a href="./index.html">Alloc</a><br/>
+<br/>
+<h1>Alloc</h1>
+<code><span class="keyword">class </span><span class="identifier">Alloc</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">Alloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc$<init>(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="always-calloc.html">alwaysCalloc</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">alwaysCalloc</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="initialized.html">initialized</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">initialized</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sentinel-metadata.html">sentinelMetadata</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sentinelMetadata</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sim.html">sim</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">sim</span><span class="symbol">: </span><a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="calloc.html">calloc</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">calloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc$calloc(kotlin.Int, kotlin.Int)/nitems">nitems</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc$calloc(kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="free.html">free</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">free</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc$free(kotlin.Int)/ptr">ptr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="initialize.html">initialize</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">initialize</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="malloc.html">malloc</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">malloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc$malloc(kotlin.Int, kotlin.Boolean)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc$malloc(kotlin.Int, kotlin.Boolean)/calloc">calloc</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;alwaysCalloc<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="num-active-blocks.html">numActiveBlocks</a></h4>
+</td>
+<td>
+<p>Counts the number of blocks which are not free.
+Returns -1 if an error has occurred (aka a corrupted list)</p>
+<code><span class="keyword">fun </span><span class="identifier">numActiveBlocks</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="realloc.html">realloc</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">realloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc$realloc(kotlin.Int, kotlin.Int)/ptr">ptr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc$realloc(kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-metadata.html">getMetadata</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMetadata</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.Alloc.Companion$getMetadata(kotlin.Int)/ptr">ptr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

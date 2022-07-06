@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>InstructionFormat - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.riscv.insts.dsl.formats</a>&nbsp;/&nbsp;<a href="./index.html">InstructionFormat</a><br/>
+<br/>
+<h1>InstructionFormat</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InstructionFormat</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">InstructionFormat</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.dsl.formats.InstructionFormat$<init>(kotlin.Int, kotlin.collections.List((venusbackend.riscv.insts.dsl.formats.FieldEqual)))/length">length</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.dsl.formats.InstructionFormat$<init>(kotlin.Int, kotlin.collections.List((venusbackend.riscv.insts.dsl.formats.FieldEqual)))/ifields">ifields</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-field-equal/index.html"><span class="identifier">FieldEqual</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="ifields.html">ifields</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ifields</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-field-equal/index.html"><span class="identifier">FieldEqual</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="length.html">length</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">length</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="fill.html">fill</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fill</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="matches.html">matches</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">matches</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.dsl.formats.InstructionFormat$matches(venusbackend.riscv.MachineCode)/mcode">mcode</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.riscv/-machine-code/index.html"><span class="identifier">MachineCode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.formats.extensions.atomic/-a-m-o-r-type-format/index.html">AMORTypeFormat</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AMORTypeFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.formats.extensions.compressed/-c-a-type-format/index.html">CATypeFormat</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CATypeFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.formats.extensions.compressed/-c-r-type-format/index.html">CRTypeFormat</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CRTypeFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.formats.extensions.floating/-f-r-type-format/index.html">FRTypeFormat</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">class </span><span class="identifier">FRTypeFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.formats.extensions.floating/-f-s-r-s2-type-format/index.html">FSRS2TypeFormat</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FSRS2TypeFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-opcode-c-funct3-format/index.html">OpcodeCFunct3Format</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OpcodeCFunct3Format</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-opcode-format/index.html">OpcodeFormat</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OpcodeFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-opcode-funct3-format/index.html">OpcodeFunct3Format</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OpcodeFunct3Format</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.formats.extensions.floating/-r4-type-format/index.html">R4TypeFormat</a></h4>
+</td>
+<td>
+<p>Created by thaum on 8/6/2018.</p>
+<code><span class="keyword">class </span><span class="identifier">R4TypeFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../venusbackend.riscv.insts.dsl.formats.base/-r-type-format/index.html">RTypeFormat</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RTypeFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">InstructionFormat</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

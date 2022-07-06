@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Block.write - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.simulator.cache</a>&nbsp;/&nbsp;<a href="index.html">Block</a>&nbsp;/&nbsp;<a href="./write.html">write</a><br/>
+<br/>
+<h1>write</h1>
+<a name="venusbackend.simulator.cache.Block$write(kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.cache.Block$write(kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.cache.Block$write(kotlin.Int, kotlin.Int)/useCounter">useCounter</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Replaces a word of data within the block for the byte address
+specified.</p>
+<h3>Parameters</h3>
+<p><a name="address"></a>
+<code>address</code> - the 32-bit address (as an int) at which to enter the data</p>
+<p><a name="data"></a>
+<code>data</code> - a 32-bit datum expressed as an int</p>
+<p><a name="recentUse"></a>
+<code>recentUse</code> - an update to the recentUse field</p>
+<h3>Exceptions</h3>
+<p><a name="NotInCacheException"></a>
+<code>NotInCacheException</code> - If the address specified does not exist
+within this block or if the block is invalid.</p>
+</BODY>
+</HTML>
