@@ -1,0 +1,39 @@
+name: Build - Web
+
+on:
+  push:
+    branches:
+      - js
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 12
+      - uses: actions/checkout@v3
+        with:
+          ref: 'js'
+      - run: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+      - run: git submodule update --init --recursive
+      - run: npm install
+      - run: npm install -g grunt-cli
+      - run: ./gradlew build -x ktlint
+      - run: ./gradlew ktlint
+      - run: grunt test
+      - run: ./gradlew dokka
+      - uses: actions/checkout@v3
+        with:
+          ref: 'gh-pages'
+          path: 'out'
+      - run: mv out/jvm jvm && rm -rf out/* && mv jvm out && grunt dist && mv doc out
+      - run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'cs61c@berkeley.edu'
+          git commit -am "Automated build ${{ github.sha }}"
+          git push
+        working-directory: ./out
