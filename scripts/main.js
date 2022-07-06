@@ -71,7 +71,7 @@ function load_error(msg) {
     if (typeof msg == "string") {
         e.innerHTML += "<br><br><div style=\"font-size:0.75em\">" + msg.replace(/\n/g, '<br>') + "</div>";
     }
-    e.innerHTML += "<br><br><br><div style=\"font-size:0.6em\">Try to reload the page. If that does not fix the issue, make an issue post on <a href='https://github.com/ThaumicMekanism/venus/issues'>github</a>.<font></font>";
+    e.innerHTML += "<br><br><br><div style=\"font-size:0.6em\">Try reloading the page. If the issue persists, please file a ticket on <a href='https://github.com/61c-teach/venus/issues'>GitHub</a>.</div>";
     document.getElementById("loader").style.opacity = 0;
 }
 
