@@ -1,0 +1,51 @@
+# This workflow will build a Java project with Gradle
+# For more information see:
+#  https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
+
+name: "Build"
+on:
+  push:
+    # No need to run on push to "develop" as there should not be any direct pushes.
+    # master is left just for emergency cases.
+    branches: [ jvm ]
+  pull_request:
+    branches: [ jvm ]
+
+env:
+  JDK_VERSION: 16
+  JDK_DISTRO: 'temurin'
+jobs:
+  # Build step.
+  build:
+    name: "Gradle builder"
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Checkout sources"
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - name: Set up JDK ${{ env.JDK_VERSION }} ${{ env.JDK_DISTRO }}
+      uses: actions/setup-java@v2
+      with:
+        java-version: ${{ env.JDK_VERSION }}
+        distribution: ${{ env.JDK_DISTRO }}
+    - name: Cache Gradle packages
+      uses: actions/cache@v1
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+        restore-keys: ${{ runner.os }}-gradle
+    - name: Set version var
+      id: vars
+      run: |
+        echo ::set-output name=version_sha::$(echo ${GITHUB_SHA} | cut -c1-7)
+        sed -i -e "s/61c.dev/61c.$(echo ${GITHUB_SHA} | cut -c1-7)/" gradle.properties
+    - name: "Build with Gradle"
+      run: |
+       chmod +x gradlew
+       ./gradlew build -x ktlint
+    - name: Post artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: jar
+        path: build/libs/*.jar
