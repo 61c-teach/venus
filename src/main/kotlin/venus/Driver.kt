@@ -88,13 +88,17 @@ object Driver {
         val traceTotalNumCommands by cli.flagValueArgument(listOf("-tn", "--traceTotalNumCommands"), "NumberOfCommands", "Sets the number of trace lines which will be printed (negative is ignored).", -1) { it.toInt() }
         val dumpInsts by cli.flagArgument(listOf("-d", "--dump"), "Dumps the instructions of the input program then quits.", false, true)
         val coreDumpFile: String by cli.flagValueArgument(listOf("-cdf", "--coreDumpFile"), "file", "Performs a core dump to file after the program finishes. Empty string does not perform a core dump.", "")
+        val coreDumpFileText: String by cli.flagValueArgument(listOf("-cdft", "--coreDumpFileText"), "file", "Performs a core dump to file after the program finishes. Empty string does not perform a core dump. Dumps in a more readable format than -cdf.", "")
         val unsetRegisters by cli.flagArgument(listOf("-ur", "--unsetRegisters"), "All registers start as 0 when set.", false, true)
 
         val getNumberOfCycles by cli.flagArgument(listOf("-n", "--numberCycles"), "Prints out the total number of cycles.", false, true)
 
         val mutableText by cli.flagArgument(listOf("-it", "--immutableText"), "When used, an error will be thrown when the code is modified.", true, false)
         val maxSteps by cli.flagValueArgument(listOf("-ms", "--maxsteps"), "MaxSteps", "Sets the max number of steps to allow (negative to not care).", "500000")
-        val stackHeapProtection by cli.flagArgument(listOf("-ahs", "--AllowHSAccess"), "Allows for load/store operations between the stack and heap. The default (without this flag) is to error on those acceses.", false, true)
+        val stackHeapProtection by cli.flagArgument(listOf("-ahs", "--AllowHSAccess"), "Allows for load/store operations between the stack and heap. The default (without this flag) is to error on those accesses.", false, true)
+        val memcheck by cli.flagArgument(listOf("-mc", "--memcheck"), "Better memory checks when accessing unallocated stack/heap memory (cannot have --AllowHSAccess)", false, true)
+        val memcheckVerbose by cli.flagArgument(listOf("-mcv", "--memcheckVerbose"), "Verbose version of --memcheck (cannot have --AllowHSAccess)", false, true)
+        val ecallOnlyExit by cli.flagArgument(listOf("-eoe", "--ecallOnlyExit"), "Exit only on ecall", false, true)
 
         val host by cli.flagValueArgument(listOf("--host"), "Host", "Host to server to.", "localhost")
         val port by cli.flagValueArgument(listOf("-p", "--port"), "Port", "Port to serve on.", "6161")
@@ -108,6 +112,8 @@ object Driver {
 
         val coverageFile by cli.flagValueArgument(listOf("-cf", "--coverageFile"), "Coverage File", "Specifies a file for the coverage output. Format: Each line: <Hex PC> <location> <count>", "")
         val jsonCoverageFile by cli.flagValueArgument(listOf("-jcf", "--jsonCoverageFile"), "Coverage File", "Specifies a file for the coverage output. Format Json: dictionary mapping <PC> to {location, count}", "")
+
+        val newWorkingDirectory by cli.flagValueArgument(listOf("-wd", "--workingDirectory"), "Working Directory", "Change the working directory of Venus", "")
 
 //        val fileIsAssembly by cli.flagArgument(listOf("-fa", "--fileIsAssembly"), "This will interpret the assembly text file as instructions.", false, true)
         val fileIsAssembly by cli.flagArgument(listOf("-fa", "--fileIsAssembly"), "This will interpret the assembly text file as instructions. If you set file to stdin, venus will listen on stdin to return a dump of the instruction. Note that branches and jumps will have a 0 immediate in this case.", false, true)
@@ -150,6 +156,24 @@ object Driver {
         simSettings.maxSteps = maxSteps.toInt()
         simSettings.mutableText = mutableText
         simSettings.allowAccessBtnStackHeap = stackHeapProtection
+        simSettings.memcheck = memcheck || memcheckVerbose
+        simSettings.memcheckVerbose = memcheckVerbose
+        simSettings.ecallOnlyExit = ecallOnlyExit
+
+        workingdir = if (newWorkingDirectory != "") {
+            val workingdirFile = if (newWorkingDirectory.startsWith(File.separator)) {
+                File(newWorkingDirectory)
+            } else {
+                File(System.getProperty("user.dir"), newWorkingDirectory)
+            }
+            if (workingdirFile.exists() && workingdirFile.isDirectory) {
+                workingdirFile.absolutePath
+            } else {
+                throw SimulatorError("Invalid working directory $newWorkingDirectory")
+            }
+        } else {
+            System.getProperty("user.dir")
+        }
 
         if (defs != "") {
             for (def in defs.split(";")) {
@@ -236,6 +260,7 @@ object Driver {
                 try {
                     sim.run(finishPluginsAfterRun = false)
                     coreDumpToFile(coreDumpFile, sim)
+                    coreDumpToFileText(coreDumpFileText, sim)
                     if (ccReporter != null && ccReporter.finish() > 0) {
                         exitProcess(-1)
                     }
@@ -259,6 +284,7 @@ object Driver {
                 } catch (e: SimulatorError) {
                     // pass
                     coreDumpToFile(coreDumpFile, sim)
+                    coreDumpToFileText(coreDumpFileText, sim)
                     System.err.println("Venus ran into a simulator error!")
                     System.err.println(e.message ?: throw e)
                     exitProcess(-1)
@@ -271,7 +297,7 @@ object Driver {
             }
 //            println() // This is to end on a new line regardless of the output.
         } catch (e: Exception) {
-            println(e)
+            e.printStackTrace()
             exitProcess(-1)
         }
     }
@@ -281,8 +307,6 @@ object Driver {
             val f = File(fileName)
             if (set_last_file) {
                 lastReadFile = f
-//                workingdir = f.absoluteFile.parent
-                workingdir = System.getProperty("user.dir")
             }
             f.readText(Charsets.UTF_8)
         } catch (e: FileNotFoundException) {
@@ -297,7 +321,7 @@ object Driver {
      * @param text the assembly code.
      */
     internal fun assemble(text: String, name: String, abspath: String): Program? {
-        val (prog, errors, warnings) = Assembler.assemble(text, name = name, abspath = abspath)
+        val (prog, errors, warnings) = Assembler.assemble(text, name = name, abspath = abspath, expandDataSegment = this.simSettings.memcheck)
         if (warnings.isNotEmpty()) {
             for (warning in warnings) {
                 Renderer.displayWarning(warning)
@@ -315,7 +339,7 @@ object Driver {
 
     internal fun link(progs: List<Program>): Boolean {
         try {
-            val PandL = ProgramAndLibraries(progs, VFS)
+            val PandL = ProgramAndLibraries(progs, VFS, expandDataSegment = this.simSettings.memcheck)
             val linked = Linker.link(PandL)
             loadSim(linked)
             return true
@@ -578,6 +602,13 @@ object Driver {
         if (fileName != "") {
             val coreDump = sim.coreDump()
             File(fileName).writeText(JavalinJson.toJson(coreDump))
+        }
+    }
+
+    private fun coreDumpToFileText(fileName: String, sim: Simulator) {
+        if (fileName != "") {
+            val coreDumpText = sim.getCoreDumpText()
+            File(fileName).writeText(coreDumpText)
         }
     }
 }
