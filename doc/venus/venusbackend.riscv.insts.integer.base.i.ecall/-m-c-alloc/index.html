@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MCAlloc - venus</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">venus</a>&nbsp;/&nbsp;<a href="../index.html">venusbackend.riscv.insts.integer.base.i.ecall</a>&nbsp;/&nbsp;<a href="./index.html">MCAlloc</a><br/>
+<br/>
+<h1>MCAlloc</h1>
+<code><span class="keyword">class </span><span class="identifier">MCAlloc</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-alloc/index.html"><span class="identifier">Alloc</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">MCAlloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MCAlloc$<init>(venusbackend.simulator.Simulator)/sim">sim</span><span class="symbol">:</span>&nbsp;<a href="../../venusbackend.simulator/-simulator/index.html"><span class="identifier">Simulator</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="heap-memory-allocs.html">heapMemoryAllocs</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">heapMemoryAllocs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="heap-memory-frees.html">heapMemoryFrees</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">heapMemoryFrees</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="free.html">free</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">free</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MCAlloc$free(kotlin.Int)/ptr">ptr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="malloc.html">malloc</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">malloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MCAlloc$malloc(kotlin.Int, kotlin.Boolean)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MCAlloc$malloc(kotlin.Int, kotlin.Boolean)/calloc">calloc</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="num-active-blocks.html">numActiveBlocks</a></h4>
+</td>
+<td>
+<p>Counts the number of blocks which are not free.
+Returns -1 if an error has occurred (aka a corrupted list)</p>
+<code><span class="keyword">fun </span><span class="identifier">numActiveBlocks</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="realloc.html">realloc</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">realloc</span><span class="symbol">(</span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MCAlloc$realloc(kotlin.Int, kotlin.Int)/ptr">ptr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.riscv.insts.integer.base.i.ecall.MCAlloc$realloc(kotlin.Int, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

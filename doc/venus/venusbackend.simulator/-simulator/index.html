@@ -225,6 +225,13 @@ Eventually, it will support debugging.</p>
 </tr>
 <tr>
 <td>
+<h4><a href="core-dump.html">coreDump</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">coreDump</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="finish-plugins.html">finishPlugins</a></h4>
 </td>
 <td>
@@ -232,10 +239,24 @@ Eventually, it will support debugging.</p>
 </tr>
 <tr>
 <td>
+<h4><a href="get-core-dump-text.html">getCoreDumpText</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCoreDumpText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="get-cycles.html">getCycles</a></h4>
 </td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">getCycles</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-ebreak-dump-str.html">getEbreakDumpStr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getEbreakDumpStr</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getEbreakDumpStr(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -260,10 +281,38 @@ Eventually, it will support debugging.</p>
 </tr>
 <tr>
 <td>
+<h4><a href="get-inst-debug-str.html">getInstDebugStr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getInstDebugStr</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getInstDebugStr(kotlin.Number)/pc">pc</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-inst-dump-str.html">getInstDumpStr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getInstDumpStr</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getInstDumpStr(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-jump-dump-str.html">getJumpDumpStr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getJumpDumpStr</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getJumpDumpStr(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="get-max-p-c.html">getMaxPC</a></h4>
 </td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">getMaxPC</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-mem-dump-str.html">getMemDumpStr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMemDumpStr</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getMemDumpStr(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -285,6 +334,13 @@ Eventually, it will support debugging.</p>
 </td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">getReg</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getReg(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-reg-dump-str.html">getRegDumpStr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRegDumpStr</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$getRegDumpStr(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -337,6 +393,13 @@ Eventually, it will support debugging.</p>
 </tr>
 <tr>
 <td>
+<h4><a href="is-valid-access-better.html">isValidAccessBetter</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isValidAccessBetter</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$isValidAccessBetter(kotlin.Number, kotlin.Int)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$isValidAccessBetter(kotlin.Number, kotlin.Int)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="load-byte.html">loadByte</a></h4>
 </td>
 <td>
@@ -347,6 +410,7 @@ Eventually, it will support debugging.</p>
 <h4><a href="load-bytew-cache.html">loadBytewCache</a></h4>
 </td>
 <td>
+<code><span class="keyword">fun </span><span class="identifier">loadBytewCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadBytewCache(kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$loadBytewCache(kotlin.Number, kotlin.Boolean)/isSyscall">isSyscall</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code><br/>
 <code><span class="keyword">fun </span><span class="identifier">loadBytewCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadBytewCache(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
 </tr>
 <tr>
@@ -361,6 +425,7 @@ Eventually, it will support debugging.</p>
 <h4><a href="load-half-wordw-cache.html">loadHalfWordwCache</a></h4>
 </td>
 <td>
+<code><span class="keyword">fun </span><span class="identifier">loadHalfWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadHalfWordwCache(kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$loadHalfWordwCache(kotlin.Number, kotlin.Boolean)/isSyscall">isSyscall</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code><br/>
 <code><span class="keyword">fun </span><span class="identifier">loadHalfWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadHalfWordwCache(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
 </tr>
 <tr>
@@ -375,6 +440,7 @@ Eventually, it will support debugging.</p>
 <h4><a href="load-longw-cache.html">loadLongwCache</a></h4>
 </td>
 <td>
+<code><span class="keyword">fun </span><span class="identifier">loadLongwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadLongwCache(kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$loadLongwCache(kotlin.Number, kotlin.Boolean)/isSyscall">isSyscall</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code><br/>
 <code><span class="keyword">fun </span><span class="identifier">loadLongwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadLongwCache(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
 </tr>
 <tr>
@@ -389,6 +455,7 @@ Eventually, it will support debugging.</p>
 <h4><a href="load-wordw-cache.html">loadWordwCache</a></h4>
 </td>
 <td>
+<code><span class="keyword">fun </span><span class="identifier">loadWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadWordwCache(kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$loadWordwCache(kotlin.Number, kotlin.Boolean)/isSyscall">isSyscall</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code><br/>
 <code><span class="keyword">fun </span><span class="identifier">loadWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$loadWordwCache(kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
 </tr>
 <tr>
@@ -544,6 +611,7 @@ Eventually, it will support debugging.</p>
 <h4><a href="store-bytew-cache.html">storeBytewCache</a></h4>
 </td>
 <td>
+<code><span class="keyword">fun </span><span class="identifier">storeBytewCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeBytewCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeBytewCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeBytewCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/isSyscall">isSyscall</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
 <code><span class="keyword">fun </span><span class="identifier">storeBytewCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeBytewCache(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeBytewCache(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -558,6 +626,7 @@ Eventually, it will support debugging.</p>
 <h4><a href="store-half-wordw-cache.html">storeHalfWordwCache</a></h4>
 </td>
 <td>
+<code><span class="keyword">fun </span><span class="identifier">storeHalfWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWordwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWordwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWordwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/isSyscall">isSyscall</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
 <code><span class="keyword">fun </span><span class="identifier">storeHalfWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWordwCache(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeHalfWordwCache(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -572,6 +641,7 @@ Eventually, it will support debugging.</p>
 <h4><a href="store-longw-cache.html">storeLongwCache</a></h4>
 </td>
 <td>
+<code><span class="keyword">fun </span><span class="identifier">storeLongwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeLongwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeLongwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeLongwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/isSyscall">isSyscall</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
 <code><span class="keyword">fun </span><span class="identifier">storeLongwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeLongwCache(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeLongwCache(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -593,6 +663,7 @@ Eventually, it will support debugging.</p>
 <h4><a href="store-wordw-cache.html">storeWordwCache</a></h4>
 </td>
 <td>
+<code><span class="keyword">fun </span><span class="identifier">storeWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeWordwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeWordwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeWordwCache(kotlin.Number, kotlin.Number, kotlin.Boolean)/isSyscall">isSyscall</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
 <code><span class="keyword">fun </span><span class="identifier">storeWordwCache</span><span class="symbol">(</span><span class="identifier" id="venusbackend.simulator.Simulator$storeWordwCache(kotlin.Number, kotlin.Number)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><span class="identifier" id="venusbackend.simulator.Simulator$storeWordwCache(kotlin.Number, kotlin.Number)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
