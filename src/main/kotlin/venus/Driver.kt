@@ -1292,7 +1292,7 @@ import kotlin.dom.removeClass
         }
     }
 
-    fun saveAll(override: Boolean = false) {
+    @JsName("saveAll") fun saveAll(override: Boolean = false) {
         if (!(useLS or override)) {
             return
         }
