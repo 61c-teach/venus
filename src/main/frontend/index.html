@@ -44,12 +44,18 @@
 </div>
 <div class="container is-fluid">
   <section class="section" id="editor-tab-view">
+    <div style="display: block;">
+      <div style="display: flex; align-items: center; margin: 8px 0px;">
+        <div style="margin: 0px 6px;"><span>Active File: </span><span id="activeFileInEditor">null</span></div>
+        <button class="button is-primary" style="margin: 0px 6px;" onclick="driver.saveActiveFileInEditor();">Save</button>
+        <button class="button is-secondary" style="margin: 0px 6px;" onclick="driver.closeActiveFileInEditor();">Close</button>
+      </div>
+    </div>
     <div class="field">
       <div class="control">
         <textarea class="textarea is-primary is-medium" placeholder="type RISC-V assembly here" id="asm-editor"></textarea>
       </div>
     </div>
-    <div>Active File: <span id="activeFileInEditor">null</span> <a onclick="driver.clearActiveFileInEditor();"> Clear</a></div>
   </section>
 </div>
 <section class="section" id="venus-tab-view">

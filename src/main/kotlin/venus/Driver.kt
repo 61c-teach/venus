@@ -1604,9 +1604,6 @@ import kotlin.dom.removeClass
 
     fun saveEditorIfModified(): Boolean {
         // Returns if there was an error.
-        if (activeFileinEditor == "") {
-            return true
-        }
         val txt: String = try {
             js("codeMirror.save();")
             this.getText()
@@ -1633,7 +1630,11 @@ import kotlin.dom.removeClass
             this.openEditor()
             return
         }
-        if (!saveEditorIfModified()) {
+        if (activeFileinEditor == "") {
+            if (getText() != "" && !window.confirm("Are you sure you want to overwrite the text currently in the editor?")) {
+                return
+            }
+        } else if (!saveEditorIfModified()) {
             if (!window.confirm("Could not save active file! Do you still want to open the new file?")) {
                 return
             }
@@ -1702,9 +1703,21 @@ import kotlin.dom.removeClass
         }
     }
 
-    @JsName("clearActiveFileInEditor") fun clearActiveFileInEditor() {
+    @JsName("saveActiveFileInEditor") fun saveActiveFileInEditor() {
+        if (activeFileinEditor == "") {
+            window.alert("No file open, please open a file first!")
+            return
+        }
+        saveVFObject(activeFileinEditor)
+    }
+
+    @JsName("closeActiveFileInEditor") fun closeActiveFileInEditor() {
+        if (activeFileinEditor != "" && !window.confirm("Are you sure you want to close the file `$activeFileinEditor`? Any unsaved changes will be lost.")) {
+            return
+        }
         active_abs_file_name = null
         set_active_afpath(null)
+        js("codeMirror.setValue(\"\");")
     }
 
     @JsName("vdbVFObject") fun vdbVFObject(name: String) {
